@@ -1,0 +1,62 @@
+/* CSS Style Sheet  */
+a{
+    color: purple;
+    text-decoration: none;
+}
+
+a:hover {
+    color:red;
+}
+
+img{
+    width: 180px;
+}
+
+#nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+ol {
+    text-align: left;
+}
+
+body{
+    background-color:#EEE;
+}
+
+#header{
+    text-align: center;
+    background-color: #5555C0;
+    color: white;
+}
+
+.w3-sidebar{
+    float: left;
+    width: 25%;
+}
+
+.w3-container{
+    float:Center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#auto{
+    width: 180px;
+    float: left;
+    padding: 10px;
+}
+
+#dec{
+    width: 180px;
+    float: left;
+    padding: 10px;
+}
+
+#footer{
+    text-align: right;
+    color: purple;
+    margin-top: 400px;
+}
+
