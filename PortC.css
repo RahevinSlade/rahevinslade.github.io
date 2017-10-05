@@ -1,0 +1,23 @@
+#container{
+    text-align: center;
+}
+
+#rows{
+    text-decoration-color: White;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-left: 100px;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: rgb(247, 240, 245);
+}
+
+body{
+    background-color: gray;
+}
