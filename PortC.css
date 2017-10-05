@@ -1,5 +1,7 @@
 #container{
     text-align: center;
+    margin: 0 auto;
+    width: 80%;
 }
 
 rows{
@@ -8,6 +10,7 @@ rows{
     width: 90%;
     margin: 0 auto;
     margin-left: 100px;
+
 }
 
 a{
