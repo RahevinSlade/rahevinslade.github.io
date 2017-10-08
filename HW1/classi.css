@@ -1,6 +1,6 @@
 /* CSS Style Sheet  */
 a{
-    color: purple;
+    color: #2986DD;
     text-decoration: none;
 }
 
@@ -10,6 +10,10 @@ a:hover {
 
 img{
     width: 180px;
+}
+
+table{
+    width: 100%;
 }
 
 #nav ul{
