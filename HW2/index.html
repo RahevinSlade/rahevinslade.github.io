@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title> HW2 </title>
+    <meta charset="utf-5">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Stylesheet.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <h1> Welcome to The Number Guessing Game! </h1>
+
+        <div id="Works">
+            <p><b>How It Works:</b> This program will choose a number ranging from 1 to 100.</p>
+            <p>You have seven attempts at guessing what the number is but, don't worry there will be hints.<br></br></p>
+            <p><b>Hints:</b> If the number you guess is higher then the choosen number, the number of attempts left will turn Red</p>
+            <p>If the number you guess is lower then the chooen number, the number of attempts left turns blue. </p>
+        </div>
+
+        <p id="Atts"> 7 </p>
+
+        <button onclick="Attempts()"> Enter </button>
+
+        <script>
+            var start = 7;
+            function Attempts(){
+                var  att = 1;
+                start = start - att;
+                document.getElementById("Atts").innerHTML = start;
+            }
+
+        </script>
+
+    </div>
+
+</body>
+
+</html>
