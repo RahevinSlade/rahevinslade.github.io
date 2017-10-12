@@ -23,14 +23,37 @@
         </div>
 
         <p id="Atts"> 7 </p>
+        <p id="sneeks"> </p>
+        <p id="result"></p>
 
-        <button onclick="Attempts()"> Enter </button>
+        <input type="number" id="myEnt" min="1" max="100">
+        <button id="myBB" onclick="Attempts()"> Enter </button>
 
         <script>
             var start = 7;
+            var Rando = Math.floor((Math.random() * 100) + 1);
             function Attempts(){
                 var  att = 1;
                 start = start - att;
+                var guess = document.getElementById("myEnt").value;
+
+                if (start == 0)
+                {
+                    document.getElementById("myBB").disabled = true;
+                    document.getElementById("myBB").style.backgroundColor = "#A9A9A9";
+
+                    if(Rando != guess){
+                        document.getElementById("result").innerHTML = "That sucks, Better Luck next time";
+                    }
+    
+                }
+
+                if (Rando == guess){
+                    document.getElementById("result").innerHTML = "Success!";
+                    document.getElementById("myBB").disabled = true;
+                }
+
+                document.getElementById("sneeks").innerHTML = Rando;
                 document.getElementById("Atts").innerHTML = start;
             }
 
