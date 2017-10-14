@@ -25,17 +25,18 @@
             <p>If the number you guess is lower then the chooen number, the number of attempts left turns blue. </p>
         </div>
 
-        <p id="Atts"> 7 </p>
-        <p id="sneeks"> </p>
-        <p id="result"></p>
+        <div id="actions">
+            <p id="Atts"> 7 </p>
+            <p id="sneeks"> </p>
+            <p id="result"></p>
 
-        <input type="number" id="myEnt" min="1" max="100" onkeypress="keyCode(event)">
-        <button id="myBB" onclick="Attempts()"> Enter </button>
-
+            <input type="number" id="myEnt" min="1" max="100" onkeypress="keyCode(event)">
+            <button id="myBB" onclick="Attempts()"> Enter </button>
+        </div>
         <script>
             var start = 7;
             var Rando = Math.floor((Math.random() * 100) + 1);
-            
+
             function keyCode(event) {
                 var keypress = event.keyCode;
                 if (keypress == 13) {
@@ -56,7 +57,7 @@
                     document.getElementById("myBB").style.backgroundColor = "#A9A9A9";
 
                     if (Rando != guess) {
-                        document.getElementById("result").innerHTML = "That sucks, Better Luck next time";
+                        document.getElementById("result").innerHTML = "That Sucks, Better Luck Next Time";
                         document.getElementById("sneeks").innerHTML = "The Answer was " + Rando;
                     }
 
@@ -70,7 +71,7 @@
                 }
 
                 if (Rando < guess) {
-                    document.getElementById("Atts").style.color = "red";
+                    document.getElementById("Atts").style.color = "#DE080E";
                 }
 
                 if (Rando > guess) {

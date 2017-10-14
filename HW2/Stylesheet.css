@@ -1,8 +1,36 @@
 #Atts{
     padding: 30px;
-    font-size: 44px;
+    font-size: 46px;
+    text-shadow: 0 0 8px white;
 }
 
 #myBB{
+margin-left: 20px;
+margin-bottom: 100px;
+}
 
+.container{
+    margin-top: 50px;
+    position: center;
+    background-color: #CC13B3;
+    font-size: 18px;
+    padding: 50px;
+}
+
+body{
+    background-color: #666565;
+
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+b {
+    font-size: 20px;
+}
+
+#actions{
+    text-align: center;
 }
