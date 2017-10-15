@@ -30,12 +30,17 @@
             <p id="sneeks"> </p>
             <p id="result"></p>
 
+            <button id="myreset" onclick="Reset()"> Reset </button>
             <input type="number" id="myEnt" min="1" max="100" onkeypress="keyCode(event)">
             <button id="myBB" onclick="Attempts()"> Enter </button>
         </div>
         <script>
             var start = 7;
             var Rando = Math.floor((Math.random() * 100) + 1);
+
+            function Reset(){
+                location.reload();
+            }
 
             function keyCode(event) {
                 var keypress = event.keyCode;

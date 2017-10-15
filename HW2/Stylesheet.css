@@ -1,3 +1,7 @@
+#myReset{
+    margin-right: 20px;
+}
+
 #Atts{
     padding: 30px;
     font-size: 46px;
@@ -15,6 +19,7 @@ margin-bottom: 100px;
     background-color: #CC13B3;
     font-size: 18px;
     padding: 50px;
+    color: Black;
 }
 
 body{
