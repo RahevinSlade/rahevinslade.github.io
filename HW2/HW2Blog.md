@@ -2,14 +2,14 @@
 
 Below are the requirments for homework 2
 
-                1. Use Git feature branch
+1. Use Git feature branch
 ```
 git branch
 git checkout -b feature
 ```
 
 
-                2. Merge feature branch back to Master
+2. Merge feature branch back to Master
 ```
 git add .
 git commit -m "Added feature branch, with a reset button"
@@ -19,12 +19,12 @@ git merge feature
 ```
 
 
-                3. have a wireframe of initial design
+3. have a wireframe of initial design
 ```
 
 ```
 
-                4. Uses Javascript
+4. Uses Javascript
 ``` <script>
  // Starting attempt number
             var start = 7;
@@ -40,7 +40,7 @@ git merge feature
     </script>
 
 ```
-                5. Uses Javascript to access the DOM
+5. Uses Javascript to access the DOM
 ```
             if (Rando == guess) {
 // if the user number is equal to the random number, tells the user they did it!
@@ -50,14 +50,14 @@ git merge feature
                     document.getElementById("sneeks").innerHTML = "The Answer was " + Rando;
                 }
 ```                
-                6. Takes in User input, doesn't fail if incorrect
+6. Takes in User input, doesn't fail if incorrect
 ```
 <!-- This text box only allows numbers within, which is used for the game, also allows user to use the enter button, restricted to 1-100, if a user enters a high number it will auto assume it is higher the random number-->
             <input type="number" id="myEnt" min="1" max="100" onkeypress="keyCode(event)">
     <!-- This button calls attempts, which then compares the users input with the generated number -->
             <button id="myBB" onclick="Attempts()"> Enter </button>
 ```
-                7. Button responds to Javascript
+7. Button responds to Javascript
 ```
 <!-- This is where we will display attempts left to the user, along with the result tag -->
         <div id="actions">
@@ -74,7 +74,7 @@ git merge feature
 
                  
 ```
-                8. Uses Jquery to modify and add to DOM to display results
+8. Uses Jquery to modify and add to DOM to display results
 ```
 //start = 7, after each attempt it is decreased by 1 this is the 
 //following code the displays the remains attempts
