@@ -20,7 +20,8 @@
         <!-- This is the description of how to play the game, it will be fun -->
         <div id="Works">
             <p><b>How It Works:</b> This program will choose a number ranging from 1 to 100.</p>
-            <p>You have seven attempts at guessing what the number is but, don't worry there will be hints.<br></br>
+            <p>You have seven attempts at guessing what the number is but, don't worry there will be hints.
+                 If you would like to see the blog for this assignment <a href="HW2Blog.md" target="_blank"> Click Here </a>.<br></br>
             </p>
             <p><b>Hints:</b> If the number you guess is higher then the choosen number, the number of attempts left will turn
                 Red
@@ -46,12 +47,10 @@
             var start = 7;
             // Random number chosen to compare with users number, chooses a number 1 - 100
             var Rando = Math.floor((Math.random() * 100) + 1);
-
             // This function is called with the reset button, which then reloads the page, thus reseting the game
             function Reset(){
                 location.reload();
             }
-
             // This function checks to see if the user pressed enter, key "13" if so, it then calls the function Attmpts()
             function keyCode(event) {
                 var keypress = event.keyCode;
@@ -59,7 +58,6 @@
                     Attempts();
                 }
             }
-
             // This function is where its all at, This is where we compare the user number with the random number, if the user did not input a number, the default is 0
             // This is also where we decrease the number of attempts left once the user has entered their guess
             // This is also were we change the color of attempts left to help out the user with hints, higher number than random is red, lower number thand random is blue. equal to is green
@@ -67,12 +65,13 @@
             function Attempts() {
                 var att = 1;
                 start = start - att;
+                // retrieves the users input number
                 var guess = document.getElementById("myEnt").value;
 
                 if (guess == null) {
                     guess = 0;
                 }
-
+                // checks to see if the number of attempts left is 0, if so disables enter button
                 if (start == 0) {
                     document.getElementById("myBB").disabled = true;
                     document.getElementById("myBB").style.backgroundColor = "#A9A9A9";
@@ -81,26 +80,23 @@
                         document.getElementById("result").innerHTML = "That Sucks, Better Luck Next Time";
                         document.getElementById("sneeks").innerHTML = "The Answer was " + Rando;
                     }
-
                 }
-
                 if (Rando == guess) {
+                    // if the user number is equal to the random number, tells the user they did it!
                     document.getElementById("result").innerHTML = "Success!";
                     document.getElementById("myBB").disabled = true;
                     document.getElementById("Atts").style.color = "#33f35a";
                     document.getElementById("sneeks").innerHTML = "The Answer was " + Rando;
                 }
-
+                // if the gues is greater than the random number its changes attemps left to red
                 if (Rando < guess) {
                     document.getElementById("Atts").style.color = "#DE080E";
                 }
-
+                // if the gues is less than the random number the number of attempts left is turned blue
                 if (Rando > guess) {
                     document.getElementById("Atts").style.color = "blue";
                 }
-
-
-                // 
+                // sets the number of attempts left to attempts - 1
                 document.getElementById("Atts").innerHTML = start;
             }
         </script>

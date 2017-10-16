@@ -16,6 +16,10 @@ margin-left: 20px;
 margin-bottom: 100px;
 }
 
+a{
+    color: white;
+}
+
 /* This is where everything is held, and positioned, color */
 .container{
     margin-top: 50px;
