@@ -1,36 +1,58 @@
 <html>
-        
-        <head>
-            <title> Portfolio </title>
-            <meta charset="utf-5">
-            <meta name="viewport" content="width-device-width, initial-scale=1">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-            <link rel="stylesheet" type="text/css" href="PortA.css" />
-        </head>
-        
-        <body>
-        
-            <div class="container-fluid">
-                <h1> My Portfolio </h1>
-            </div>
-            <div id="content">
-            <p>Hello, my name is Rahevin.</p>
-            <p>I'm a senior at Western Oregon University working on my bachelors for Computer Science and Math.</p>
-            <p>This is my portfolio, where I stash all the cool stuff I find and attempt to implement it and give</p>
-            <p>it my own twist. CS 460 will take you to my current work in progress.</p>
+
+<head>
+    <title> Portfolio </title>
+    <meta charset="utf-5">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <!-- This is where we load in bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- this is where we load in the stylesheet -->
+    <link rel="stylesheet" type="text/css" href="PortA.css" />
+</head>
+
+<body>
+    <!-- This is the container, where everything is contained in -->
+    <div class="container-fluid">
+        <div id="title">
+            <h1> My Portfolio </h1>
         </div>
-            <div class="dropdown">
-                <button class="dropbtn"> Menu </button>
-                <div class="dropdown-content">
-                    <a href="cs460.html"target="_blank">CS 460 Assignments</a>
-                    <a href=""target="_blank">CS 461 Assignments</a>
-                    <a href=""target="_blank">CS 462 Assignments</a>
-                    <a href="https://github.com/RahevinSlade"target="_black">My Github page</a>
-                    <a href=""target="_blank">Other Content</a>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="dropdown">
+                    <!-- this is a drop down menu with links to the cs page -->
+                    <button class="dropbtn"> Menu </button>
+                    <div class="dropdown-content">
+                        <a href="cs460.html" target="_blank">CS 460 Assignments</a>
+                        <a href="" target="_blank">CS 461 Assignments</a>
+                        <a href="" target="_blank">CS 462 Assignments</a>
+                        <a href="https://github.com/RahevinSlade" target="_black">My Github page</a>
+                        <a href="" target="_blank">Other Content</a>
+                    </div>
                 </div>
             </div>
-        </body>
-        
-        </html>
+            <div class="col-sm-6">
+                <div id="content">
+                    <!-- a brief describtion of me and what this site it used for -->
+                    <p>Hello, my name is Rahevin.</p>
+                    <p>I'm a senior at Western Oregon University working on my bachelors for Computer Science and Math. This
+                        is my portfolio, where I stash all the cool stuff I find and attempt to implement it and give it
+                        my own twist. CS 460, which you can find in dropdown menu to the left, will take you to my current
+                        work in progress.</p>
+                    <p>To find the homework assignments, click the CS 460 link, then click on any homework assignment you wish
+                        to see. To find the assignment requirements/blogs for each homework assignment each homework will
+                        have a link with blog details and code snippets.
+                    </p>
+                    <!-- informs the user of what sites they can use at the moment -->
+                    <p>Current working sites in Menu
+                        <li>CS 460</li></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

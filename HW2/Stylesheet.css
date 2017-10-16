@@ -1,18 +1,22 @@
+/* Creates space between reset button and the number text box */
 #myReset{
     margin-right: 20px;
 }
 
+/* Displays the font size of attempts left, and creates a shadow so it is easier to read */
 #Atts{
     padding: 30px;
     font-size: 46px;
     text-shadow: 0 0 8px white;
 }
 
+/* Puts spaces between number text box and the Enter button */
 #myBB{
 margin-left: 20px;
 margin-bottom: 100px;
 }
 
+/* This is where everything is held, and positioned, color */
 .container{
     margin-top: 50px;
     position: center;
@@ -22,20 +26,24 @@ margin-bottom: 100px;
     color: Black;
 }
 
+/* the body, puts a gray color behind the container */
 body{
     background-color: #666565;
 
 }
 
+/* centers the title of the game */
 h1{
     text-align: center;
     margin-bottom: 20px;
 }
 
+/* Increase the bold text  */
 b {
     font-size: 20px;
 }
 
+/* this is where it displays text to the user after all the attmpts have been use */
 #actions{
     text-align: center;
 }

@@ -1,3 +1,4 @@
+/* this is the dropdown menu , provides colors and text */
 .dropbtn{
     background-color: purple;
     color: white;
@@ -6,17 +7,18 @@
     border: none;
     cursor: pointer;
 }
-
+/* positions the dropdown menu */
 .dropdown{
     position: relative;
     display: inline-block;
     padding:20px;
 }
-
+/* content that holds all the classes and ids */
 #content{
     padding: 20px;
+    font-size: 16px;
 }
-
+/* continent in the dropdown menu */
 .dropdown-content{
     display: none;
     position: absolute;
@@ -26,7 +28,7 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
+/* the links within the dropdown menu */
 .dropdown-content a {
     color: black;
     padding: 20px 16px;
@@ -34,6 +36,7 @@
     display: block;
 }
 
+/* highlights links within the dropdown menu */
 .dropdown-content a:hover{
     background-color: red;
 }
@@ -47,10 +50,18 @@
 }
 
 .container-fluid{
-    background-color: #EB52EB;
-    color: white;
-}
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 400px;
+    background-color: #B564EB;
 
+}
+/* edits the title of the page */
+#title{
+    background-color: #EB52EB;
+    color: black;
+}
+/* the body of the page */
 body{
     background-color: #BBB6B6;
     color:black;
