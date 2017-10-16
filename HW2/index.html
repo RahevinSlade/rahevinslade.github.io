@@ -22,7 +22,8 @@
             <p><b>How It Works:</b> This program will choose a number ranging from 1 to 100.</p>
             <p>You have seven attempts at guessing what the number is but, don't worry there will be hints.
                  If you would like to see the blog for this assignment <a href="https://github.com/RahevinSlade/rahevinslade.github.io/blob/master/HW2/HW2Blog.md" target="_blank"> Click Here </a>.<br></br>
-            </p>
+             If you guess higher than 100, it will auto assign your guessed number to 100, same if you choose a number lower than 1 or leave the textbox blank.
+                </p>
             <p><b>Hints:</b> If the number you guess is higher then the choosen number, the number of attempts left will turn
                 Red
             </p>
@@ -41,10 +42,16 @@
             <input type="number" id="myEnt" min="1" max="100" onkeypress="keyCode(event)">
             <!-- This button calls attempts, which then compares the users input with the generated number -->
             <button id="myBB" onclick="Attempts()"> Enter </button>
+            <br>
+            You guessed: <p id="EN"></p>
         </div>
+            
         <script>
             // Starting attempt number
             var start = 7;
+            //list of previous guesses
+            var GL = [];
+            document.getElementById("EN").innerHTML = GL;
             // Random number chosen to compare with users number, chooses a number 1 - 100
             var Rando = Math.floor((Math.random() * 100) + 1);
             // This function is called with the reset button, which then reloads the page, thus reseting the game
@@ -68,8 +75,12 @@
                 // retrieves the users input number
                 var guess = document.getElementById("myEnt").value;
 
-                if (guess == null) {
-                    guess = 0;
+                if (guess > 100){
+                    guess = 100;
+                }
+
+                if (guess < 1){
+                    guess = 1;
                 }
                 // checks to see if the number of attempts left is 0, if so disables enter button
                 if (start == 0) {
@@ -97,6 +108,8 @@
                     document.getElementById("Atts").style.color = "blue";
                 }
                 // sets the number of attempts left to attempts - 1
+                GL.push(guess);
+                document.getElementById("EN").innerHTML = GL;
                 document.getElementById("Atts").innerHTML = start;
             }
         </script>
