@@ -21,7 +21,7 @@ git merge feature
 
 3. have a wireframe of initial design
 
-![Wireframe](wireframe.png)
+![Wireframe](wireframe.pdf)
 
 
 4. Uses Javascript
