@@ -21,7 +21,7 @@ git merge feature
 
 3. have a wireframe of initial design
 
-![Wireframe](wireframe.pdf)
+![Wireframe](wireframe.pdf) Click the link to view the hand drawn picture of the wireframe.
 
 
 4. Uses Javascript
