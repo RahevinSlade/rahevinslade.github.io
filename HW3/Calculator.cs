@@ -1,17 +1,19 @@
 ﻿using System;
-using System.Windows.Forms;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MyProgram
+namespace Calculator
 {
-    static class Program
-        [STAThread]
-    static void Main(string[] args)
+    class Program
     {
-        System.Console.WriteLine("ABC");
-        Application.EnableVisualStyles();
-        Application.SetCompatibleTextRenderingDefault(false);
-        Application.Run(new Form1(args));
+        static void Main(string[] args)
+        {
+            string input;
+            Console.WriteLine("Name please");
+            input = Console.ReadLine();
+            Console.WriteLine("Hello, {0}", input);
+        }
     }
 }
-}
-
