@@ -1,9 +1,9 @@
 .container-fluid{
     text-align: center;
-    background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* For Fx 3.6 to 15 */
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Standard syntax (must be last) */
+    background: -webkit-linear-gradient(left, #CF2020, #DB9317, #D6D613, #12C712, #0F0FD4, #6F0FB9, #BE0EBE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #CF2020, #DB9317, #D6D613, #12C712, #0F0FD4, #6F0FB9, #BE0EBE); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #CF2020, #DB9317, #D6D613, #12C712, #0F0FD4, #6F0FB9, #BE0EBE); /* For Fx 3.6 to 15 */
+    background: linear-gradient(to right, #CF2020, #DB9317, #D6D613, #12C712, #0F0FD4, #6F0FB9, #BE0EBE); /* Standard syntax (must be last) */
     margin-left: 50px;
     margin-right: 50px;
     padding-bottom: 400px;
@@ -44,4 +44,5 @@ body{
 
 h1{
     color: black;
+    text-shadow: 0 0 8px #F0EAEF;
 }
