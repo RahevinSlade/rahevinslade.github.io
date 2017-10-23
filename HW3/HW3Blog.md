@@ -41,5 +41,18 @@ Public string PostFixInput(string userinput)
     string e;//this will be our error message at the end
     string s;//determines the action for the two doubles
 }
-
 ```
+6. Interface typename starts with an I, like Istack
+
+well in this case I called it
+IFace
+```
+interface IFace
+{
+
+}
+```
+7. Node class uses properties
+
+8. Codes is adequtely and appropiately commented using XML comments
+9. Code and screenshots are nicely displayed in the Portfolio; Portfolio is organized and easy to read; page contain more than just the code and screenshot.
