@@ -1,8 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Class1
+namespace LinkedProject
 {
-	public Class1()
-	{
-	}
+    interface IFace
+    {
+        Object Push(Object newItem);
+        Object Pop();
+        Object Peek();
+        bool IsEmpty();
+        void Clear();
+    }
+
 }

@@ -35,11 +35,19 @@ body{
 }
 
 .center{
-    margin: auto;
+    text-align: center;
+    border: 3px black;
+    outline: black;
+    /* margin: 0 auto;
     width: 80%;
     text-align: center;
-    float: none;
+    float: none; */
+}
 
+.row{
+    background-color: black;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 h1{
