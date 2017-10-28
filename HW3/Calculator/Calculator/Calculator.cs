@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkedProject
+namespace Calculator
 {
-    class Program
+    class Calculator
     {
       // private IFace mystack = new LinkedStack();
 
         static void Main(string[] args)
         {   //allows the user to continue to use the program over and over until they are satisfied
-            Program calc = new Program();
+            Calculator calc = new Calculator();
             //sets the program to keep running untill it is set to false
             bool playagain = true;
             //informs the user how to play the program
