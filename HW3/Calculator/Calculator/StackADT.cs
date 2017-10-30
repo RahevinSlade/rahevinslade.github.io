@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-    interface IFace
-    {
-        Object Push(Object newItem);
-        Object Pop();
-        Object Peek();
+    interface IFace//Here is our interface, where we will create methods but not define them
+    {//we will have push, pop, peek, and isempty, and clear
+        object Push(object newItem);
+        object Pop();
+        object Peek();
         bool IsEmpty();
         void Clear();
     }

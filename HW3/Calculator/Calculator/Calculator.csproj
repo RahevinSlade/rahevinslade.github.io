@@ -43,7 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="LinkedStack.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StackADT.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
