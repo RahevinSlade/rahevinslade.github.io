@@ -13,11 +13,13 @@ git push origin HW3
     
 2) Commits show that code was written from scratch
 
-![CLICK ME](Commits.PNG) to view the image showing all commits, or you can just view my git hub. Here we can see all my commits, different amount of achievements and checkpoints. 
+The image below shows some of my commits, showing I have been editing and commiting my code, slowly showin progress. 
+![CLICK ME](Commits.PNG)
     
 
 3)  Code Compiles,
-![CLICK ME](Compile.PNG) to view an image displaying the code compiling and working.
+The image below shows a screenshot of my code compiling and testing different inputs.
+![CLICK ME](Compile.PNG)
     
 
 4)  Built in typenames like string and object are lowercase
