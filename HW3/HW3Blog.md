@@ -14,12 +14,15 @@ git push origin HW3
 2) Commits show that code was written from scratch
 
 The image below shows some of my commits, showing I have been editing and commiting my code, slowly showin progress. 
-![CLICK ME](Commits.PNG)
+
+![CLICK ME](./Commits.PNG)
     
 
-3)  Code Compiles,
+3)  Code Compiles
+
 The image below shows a screenshot of my code compiling and testing different inputs.
-![CLICK ME](Compile.PNG)
+
+![CLICK ME](./Compile.PNG)
     
 
 4)  Built in typenames like string and object are lowercase
