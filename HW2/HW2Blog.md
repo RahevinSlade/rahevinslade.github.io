@@ -25,7 +25,8 @@ git merge feature
 
 
 4. Uses Javascript
-``` <script>
+``` 
+<script>
  // Starting attempt number
             var start = 7;
 // Random number chosen to compare with users number, chooses a number 1 - 100

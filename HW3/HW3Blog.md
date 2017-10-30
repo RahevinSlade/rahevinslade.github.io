@@ -2,7 +2,7 @@
 
 Below are the requirements for homework 3
 
-1. Uses Git branching, all commits are done on branch HW3
+1.  Uses Git branching, all commits are done on branch HW3
 ```
 git branch
 git checkout HW3
@@ -11,14 +11,14 @@ git commit -m "Example, Node-bodies code here"
 git push origin HW3
 ```
 
-2. Commits show that code was written from scratch
+2.  Commits show that code was written from scratch
 
 ![CLICK ME](Commits.PNG Commits) to view the image showing all commits, or you can just view my git hub. Here we can see all my commits, different amount of achievements and checkpoints. 
 
-3. Code Compiles,
+3.  Code Compiles,
 ![CLICK ME](Compile.PNG Compile) to view an image displaying the code compiling and working.
 
-4. Built in typenames like string and object are lowercase
+4.  Built in typenames like string and object are lowercase
 
 Bits from Calculator.cs code(bits of code not in order, just a demostration of the requirment)
 ```
@@ -36,7 +36,7 @@ Bits from the Node.cs code
             Next = next;
         }
 ```
-5. Method names and public fields start with Upper case, private and local variables start with lower case
+5.  Method names and public fields start with Upper case, private and local variables start with lower case
 ```
     //gathers and parses the users input and determines if it is "good" input 
         public string PostFixInput(string userinput)
@@ -49,7 +49,7 @@ Bits from the Node.cs code
                 return e;
             }
 ```
-6. Interface typename starts with an I, like Istack
+6.  Interface typename starts with an I, like Istack
 
 well in this case I called it
 IFace, because it is an InterFace...
@@ -66,7 +66,7 @@ namespace Calculator
     }
 }
 ```
-7. Node class uses properties
+7.  Node class uses properties
 ```
 public class Node
     {
@@ -87,5 +87,5 @@ public class Node
     }
 ```
 
-8. Codes is adequtely and appropiately commented using XML comments
+8.  Codes is adequtely and appropiately commented using XML comments
 
