@@ -15,14 +15,14 @@ git push origin HW3
 
 The image below shows some of my commits, showing I have been editing and commiting my code, slowly showin progress. 
 
-![CLICK ME](./Commits.PNG)
+![Screenshot of Git Commits](Commits.PNG)
     
 
 3)  Code Compiles
 
 The image below shows a screenshot of my code compiling and testing different inputs.
 
-![CLICK ME](./Compile.PNG)
+![Screenshot of working code](Compile.PNG)
     
 
 4)  Built in typenames like string and object are lowercase
