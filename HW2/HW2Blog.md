@@ -21,7 +21,7 @@ git merge feature
 
 3. have a wireframe of initial design
 
-![Wireframe](wireframe.pdf) Click the link to view the hand drawn picture of the wireframe.
+![Click Me](wireframe.pdf) to view the hand drawn picture of the wireframe I have made, you'll notice small differences between the drawn version and final one.
 
 
 4. Uses Javascript

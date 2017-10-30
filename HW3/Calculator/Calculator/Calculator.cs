@@ -69,10 +69,10 @@ namespace Calculator
             if((userinput == null) || (userinput == ""|| (userinput == " ")))// we will not tolerate nulls or empty inputs
                 {
                 e = "Null or the empty string are not valid postfix expressions.";
-                //mystack.Clear();
+                mystack.Clear();
                 return e;
             }
-            mystack.Clear();
+           // mystack.Clear();
 
             string s;//determines action for the digits
             double a = 0.0;
