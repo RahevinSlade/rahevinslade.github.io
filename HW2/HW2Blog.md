@@ -21,8 +21,9 @@ git merge feature
 
 3) have a wireframe of initial design
 
-![Wireframe of project](wireframe.PNG) to view the hand drawn picture of the wireframe I have made, you'll notice small differences between the drawn version and final one.
+This image shows the first design of the design, you'll notice small changes from this wireframe to the final product. 
 
+![Wireframe of project](wireframe.PNG) 
 
 4) Uses Javascript
 ``` 
