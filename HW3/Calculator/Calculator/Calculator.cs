@@ -9,11 +9,11 @@ namespace Calculator
     class Calculator
     {
 
-      private IFace mystack = new LinkedStack();
+      private IFace Mystack = new LinkedStack();
 
         static void Main(string[] args)
         {   //allows the user to continue to use the program over and over until they are satisfied
-            Calculator calc = new Calculator();
+            Calculator Calc = new Calculator();
             //sets the program to keep running untill it is set to false
             bool playagain = true;
             //informs the user how to play the program
@@ -22,7 +22,7 @@ namespace Calculator
             while (playagain)
             {
                 //calls the next method
-                playagain = calc.DoCalculation();
+                playagain = Calc.DoCalculation();
             }
             //after the user is done, this message is played
             System.Console.WriteLine("Buh Bye.");
@@ -69,10 +69,10 @@ namespace Calculator
             if((userinput == null) || (userinput == ""|| (userinput == " ")))// we will not tolerate nulls or empty inputs
                 {
                 e = "Null or the empty string are not valid postfix expressions.";
-                mystack.Clear();
+                Mystack.Clear();
                 return e;
             }
-           // mystack.Clear();
+           // Mystack.Clear();
 
             string s;//determines action for the digits
             double a = 0.0;
@@ -85,38 +85,38 @@ namespace Calculator
             try //now is the first part of the string really a double, or are you just testing our program
             {
                 a = Convert.ToDouble(vari[0]);
-                mystack.Push(a);
+                Mystack.Push(a);
             }
             catch (FormatException)
             {
                 e = "Improper input format. Stack became empty when expecting first operand.";
-                mystack.Pop();
+                Mystack.Pop();
                 return e;
             }
             try// now is the second part of the string reallly a double, or you trying to trick us
             {
                 b = Convert.ToDouble(vari[1]);
-                mystack.Push(b);
+                Mystack.Push(b);
             }
             catch (FormatException)
             {
                 e = "Improper input format. Stack became empty when expecting second operand.";
-                mystack.Pop();
+                Mystack.Pop();
                 return e;
             }
             s = vari[2];
-            mystack.Push(s);
+            Mystack.Push(s);
 
             if (s.Length > 1) // checks to see if the last bit of the string is an operator, if you "accidently" put more chars this catches that
             {
                 e = "Input Error " + s + " is not an allowed number or operator";
-                mystack.Pop();
+                Mystack.Pop();
                 return e;
             }
             else if (s.Equals("+") || s.Equals("-") || s.Equals("*") || s.Equals("/")) // allows the following 
             {
                c = DoOperation(a, b, s);
-                mystack.Push(c);
+                Mystack.Push(c);
                 return c.ToString();
             }
             else // you must have not done the above else if statement to get here

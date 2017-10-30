@@ -53,7 +53,7 @@ Bits from the Node.cs code
             if((userinput == null) || (userinput == ""|| (userinput == " ")))// we will not tolerate nulls or empty inputs
                 {
                 e = "Null or the empty string are not valid postfix expressions.";//string to return to the user
-                //mystack.Clear();//Clears the stack because there is no input
+                Mystack.Clear();//Clears the stack because there is no input
                 return e;
             }
 ```
