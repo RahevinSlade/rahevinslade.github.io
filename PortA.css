@@ -61,6 +61,11 @@
     background-color: #EB52EB;
     color: black;
 }
+#image{
+    margin: auto;
+    float: right;
+}
+
 /* the body of the page */
 body{
     background-color: #BBB6B6;
