@@ -15,7 +15,7 @@ namespace HomeA.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "I did a thing";
+            ViewBag.Message = "Welcome to the menu page!!!";
 
             return View();
         }
