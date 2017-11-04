@@ -6,11 +6,14 @@
 <h2>Page 1</h2>
 
 <form method="post">
-
-    First Name: <input type="text" name="FN"><br>
-
-    Last Name: <input type="text" name="LN"><br>
-
-    <input type="submit">
-
+    <label for="name"> First Name </label>
+    <input type="text" name="Fname" value="" />
+    <label for="password"> Last Name </label>
+    <input type="text" name="Lname" value="" />
+    <input type="submit" name="submit" value="Submit" />
 </form>
+
+@if (ViewBag.Fname == "Rahevin")
+{
+    <p>Thanks @ViewBag.Fname </p>
+}
