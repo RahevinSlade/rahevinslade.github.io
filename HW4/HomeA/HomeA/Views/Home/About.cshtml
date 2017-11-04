@@ -1,7 +1,18 @@
 ﻿@{
-    ViewBag.Title = "Text Form";
+    ViewBag.Title = "About";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
 <p> A form with at least two text fields and a submit button. </p>
+
+
+<form action="name_get.php" method="get">
+    First Name: <input type="text" name="FN" /><br />
+    <br />
+    Last Name : <input type="text" name="LN" /><br />
+
+    <input type="submit" value="Submit" />
+</form>
+
+
