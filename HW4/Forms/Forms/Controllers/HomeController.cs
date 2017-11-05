@@ -74,7 +74,7 @@ namespace Forms.Controllers// Here is our controller, holding all our fun stuff
                 gt = fname + num.ToString();
             }
             //we just mash up the two, to create a gamertag
-            ViewBag.newgt = ($"{gt}, is your new gamer tag and my I say, it looks Fabulous!"); 
+            ViewBag.newgt = ($"{gt}, is your new gamer tag and may I say, it looks Fabulous!"); 
 
             return View();
         }
@@ -102,9 +102,9 @@ namespace Forms.Controllers// Here is our controller, holding all our fun stuff
             payment = Math.Round(payment, 2);
 
             //we will return a new page with all the information they inputed.
-            return  Content($" ${amount} this is the current amount. \n" +
-                $"{rate}% is the rate. \n" + 
-                $"{term} is the number of periods. \n" +
+            return  Content($" ${amount} this is the current amount. " +
+                $"{rate}% is the rate. " + 
+                $"{term} is the number of periods. " +
                 $"{payment} is the cost termly. ");
         }
     }
