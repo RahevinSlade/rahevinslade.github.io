@@ -52,11 +52,8 @@ namespace Forms.Controllers
             return Content($"{result} Ta-Da, here is your result");
         }
 
-       [HttpGet]//this is part two
-        public ActionResult Form1()
-        {
-            return View();
-        }
+        [HttpGet]//this is part two
+        public ActionResult Form1() => View();
 
         [HttpPost]
         public ActionResult Form1(FormCollection form)
@@ -78,23 +75,25 @@ namespace Forms.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ViewResult LoanCalc()
+       // [HttpGet] //You spelt it wrong, goodness that took awhile
+        public ActionResult Loan()
         {
             return View();
         }
 
-        [HttpPost]
-        public ActionResult LoanCalc(LoanCalc  loanCalc)
-        {
-            if (ModelState.IsValid)
-            {
-                return View("bleh", loanCalc);
-            }
-            else
-            {
-                return View();
-            }
-        }
+        //[HttpPost]
+        //public ActionResult LoanCalc(LoanCalc  loanCalc)
+        //{
+        //    ViewBag.RequestMethod = "POST";
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        return View("bleh", loanCalc);
+        //    }
+        //    else
+        //    {
+        //        return View();
+        //    }
+        //}
     }
 }
