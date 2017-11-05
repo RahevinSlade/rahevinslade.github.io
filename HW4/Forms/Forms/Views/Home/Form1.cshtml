@@ -5,15 +5,16 @@
 
 <h2>Page 1</h2>
 
-<form method="post">
-    <label for="name"> First Name </label>
+<p>Enter your name and your favorite number and we will create gamertag for you! </p>
+
+<form method="post" action="/Home/Form1">
+    <label for="fname"> First Name </label>
     <input type="text" name="Fname" value="" />
-    <label for="password"> Last Name </label>
-    <input type="text" name="Lname" value="" />
+    <label for="Num"> Favorite Number </label>
+    <input type="number" name="num" value="" />
+
     <input type="submit" name="submit" value="Submit" />
 </form>
 
-@if (ViewBag.Fname == "Rahevin")
-{
-    <p>Thanks @ViewBag.Fname </p>
-}
+
+    <p> @ViewBag.newgt </p>
