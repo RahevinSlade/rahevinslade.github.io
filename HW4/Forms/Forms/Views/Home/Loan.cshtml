@@ -1,0 +1,26 @@
+﻿@model Forms.Models.LoanCalc
+
+@{
+    ViewBag.Title = "LoanCalc";
+}
+
+<h2>Loan</h2>
+
+<p> Ah man, that time again to take out them loans for your life style, well great news. I have a Calculator for you that can help</p>
+<p> First textbox should contain the Amount</p>
+<p> Second textbox should contain the monthly interest rate</p>
+<p> And the last textbox should contain the number of payments you will like to make</p>
+
+<form method="post">
+
+    <label for="amount"> Amount </label>
+    <input type="number" name="amount" value="" />
+
+    <label for="per"> Rate </label>
+    <input type="number" name="perc" value="" />
+
+    <label for="len"> Term Length </label>
+    <input type="number" name="len" value="" />
+
+    <input type="submit" name="submit" value="Submit" />
+</form>

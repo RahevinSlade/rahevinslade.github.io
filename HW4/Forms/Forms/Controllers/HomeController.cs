@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Net;
 using System.Web.Mvc;
+using Forms.Models;
 
 namespace Forms.Controllers
 {
@@ -77,5 +78,23 @@ namespace Forms.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ViewResult LoanCalc()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult LoanCalc(LoanCalc  loanCalc)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("bleh", loanCalc);
+            }
+            else
+            {
+                return View();
+            }
+        }
     }
 }
