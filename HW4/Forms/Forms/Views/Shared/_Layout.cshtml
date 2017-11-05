@@ -17,10 +17,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                @*Herwe is our pointer to our home page*@
                 @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    @*Here we have our links to the other pages to perform there designated tasks*@
                     <li>@Html.ActionLink("Home","Index","Home")</li>
                     <li>@Html.ActionLink("Form1", "Form1", "Home")</li>
                     <li>@Html.ActionLink("Convert1", "Convert1", "Home")</li>

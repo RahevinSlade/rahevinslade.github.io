@@ -4,7 +4,7 @@
     ViewBag.Title = "LoanCalc";
     Layout = null;
 }
-
+@*This is where we gather all the data from the user*@
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
 
 <h2>Loan</h2>
@@ -17,13 +17,14 @@
 <form method="post">
 
     <label for="amount"> Amount </label>
-    <input type="number" name="amount" value="" />
+    <input type="number" name="amount" min="0" value="" step=".01" />
 
-    <label for="per"> Rate </label>
-    <input type="number" name="perc" value="" />
+    <label for="rate"> Rate </label>
+    <input type="number" name="rate" min="0" value="" step=".01" />
 
-    <label for="len"> Term Length </label>
-    <input type="number" name="len" value="" />
+    <label for="term"> Term Length </label>
+    <input type="number" name="term" value="" />
 
     <input type="submit" name="submit" value="Submit" />
 </form>
+

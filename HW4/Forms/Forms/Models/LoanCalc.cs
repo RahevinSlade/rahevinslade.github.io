@@ -5,7 +5,7 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 
 namespace Forms.Models
-{
+{//this is our Model for the Loan calculator
     public class LoanCalc
     {
         [Required(ErrorMessage = "Looks like you entered in the wrong amount")]
