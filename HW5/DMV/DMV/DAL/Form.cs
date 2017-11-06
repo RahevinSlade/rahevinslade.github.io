@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using DMV.Models;
 using System.Data.Entity;
 
 namespace DMV.DAL
 {
-    public class Change
+    public class Form
     {
-        public Change() : base("name=Form")
+        public Form() : base("name=Form")
         {
 
         }
