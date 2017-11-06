@@ -6,12 +6,12 @@ using System.Data.Entity;
 
 namespace DMV.DAL
 {
-    public class Form : DMVadd
+    public class Change
     {
-        public Form() : base("name=Form")
+        public Change() : base("name=Form")
         {
 
         }
-        public virtual DbSet<Change> Requests { get; set; }
+        public virtual DbSet<Change> People { get; set; }
     }
 }

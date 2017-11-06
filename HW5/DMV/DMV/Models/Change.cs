@@ -18,7 +18,7 @@ namespace DMV.Models
         public string Fullname { get; set; }
 
         [Display(Name = "Address:"), Required]
-        public string address { get; set; }
+        public string rAddress { get; set; }
 
         [Display(Name = "CSZ:"), Required]
         public string CSZ { get; set; }
@@ -27,7 +27,8 @@ namespace DMV.Models
         public string County { get; set; }
 
         [Display(Name = "Date:"), DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}"), Required]
-        public DateTime cdate { get; set; }
+        public DateTime sDate { get; set; }
+
 
     }
 }
