@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DMV.Models
 {
-    public class Change
+    public class Person
     {
         [Display(Name = "Customer Number"), Required]
         public int ID { get; set; }
@@ -15,7 +15,7 @@ namespace DMV.Models
         public DateTime DOB { get; set; }
 
         [Display(Name = "Name:"), Required]
-        public string Fullname { get; set; }
+        public string FullName { get; set; }
 
         [Display(Name = "Address:"), Required]
         public string rAddress { get; set; }

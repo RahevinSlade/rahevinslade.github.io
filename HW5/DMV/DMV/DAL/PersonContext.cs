@@ -7,12 +7,12 @@ using System.Data.Entity;
 
 namespace DMV.DAL
 {
-    public class Form
+    public class PersonContext : DbContext
     {
-        public Form() : base("name=Form")
+        public PersonContext() : base("name=PersonContext")
         {
 
         }
-        public virtual DbSet<Change> People { get; set; }
+        public virtual DbSet<Person> Persons { get; set; }
     }
 }

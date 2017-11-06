@@ -1,9 +1,43 @@
-﻿
+﻿@model IEnumerable<DMV.Models.Person>
+
 @{
     ViewBag.Title = "Awaiting";
 }
 
-<h2>Awaiting</h2>
+<h2>Awaiting Address Changes</h2>
 
-<p> This is where we will display all the people who are waiting to have their addresses changed.</p>
+<br />
+<div class="table-div">
+  
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ID)th>
+            <th>@Html.DisplayNameFor(model => model.FullName)</th>
+            <th>@Html.DisplayNameFor(model => model.DOB)</th>
+            <th>@Html.DisplayNameFor(model => model.rAddress)</th>
+            <th>@Html.DisplayNameFor(model => model.CSZ)</th>
+            <th>@Html.DisplayNameFor(model => model.County)</th>
+            <th>@Html.DisplayNameFor(model => model.nAddress)</th>
+            <th>@Html.DisplayNameFor(model => model.nCSZ)</th>
+            <th>@Html.DisplayNameFor(model => model.nCounty)</th>
+            <th>@Html.DisplayNameFor(model => model.sDate)</th>
+        </tr>
 
+
+        @foreach (var item in Model)
+        {
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.ID)th>
+                    <th>@Html.DisplayNameFor(model => model.FullName)</th>
+                    <th>@Html.DisplayNameFor(model => model.DOB)</th>
+                    <th>@Html.DisplayNameFor(model => model.rAddress)</th>
+                    <th>@Html.DisplayNameFor(model => model.CSZ)</th>
+                    <th>@Html.DisplayNameFor(model => model.County)</th>
+                    <th>@Html.DisplayNameFor(model => model.nAddress)</th>
+                    <th>@Html.DisplayNameFor(model => model.nCSZ)</th>
+                    <th>@Html.DisplayNameFor(model => model.nCounty)</th>
+                    <th>@Html.DisplayNameFor(model => model.sDate)</th>
+                </tr>
+                }
+            </table>
+</div>
