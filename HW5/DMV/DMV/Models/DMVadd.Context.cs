@@ -25,5 +25,6 @@ namespace DMV.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Address> Addresses { get; set; }
     }
 }

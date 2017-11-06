@@ -18,5 +18,9 @@ namespace DMV.Controllers
             return View();
         }
 
+        public ActionResult Awaiting()
+        {
+            return View();
+        }
     }
 }

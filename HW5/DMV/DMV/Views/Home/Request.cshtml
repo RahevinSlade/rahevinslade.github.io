@@ -8,3 +8,30 @@
 
 <p> <b>NOTE:</b> ALL information is REQUIRED to change you address.</p>
 
+@* id, dob, lname, fname, mname, address, city, state, zip, country *@
+ @*New address, ncity, nstate, nzip, ncountry, date*@
+
+<label for="ID"> ID </label>
+<input type="number" name="ID"  placeholder="ODL/PERMIT/ID/CUSTOMER #"  />
+
+<p> <b>DATE OF BIRTH </b>(MM/DD/YYYY)</p>
+<label for="DOB">  </label>
+<input type="date" name="DOB" value="" /><br />
+
+<label for="name"> FULL LEGALE NAME (Print last, first, middle) </label>
+<input type="text" name="name" placeholder="Seed, Johnny, Apple" size="50" />
+
+<p><b>NEW RESIDENCE ADDRESS</b>(No Post Office Box Number or mail forwarding address)</p>
+<label for="address"> </label>
+<input type="text" name="address" placeholder="NEW RESIDENCE ADDRESS" size="50"/><br />
+
+<input type="text" name="CSZ" placeholder="CITY, STATE, ZIP CODE" size="50"/>
+<input type="text" name="county" placeholder="COUNTY" size="20"/>
+
+<p><b>NEW MAILING ADDRESS</b>(If different from residence address above; Post Office Box Number or mail forwarding address goes here.)</p>
+
+<label for="naddress"> </label>
+<input type="text" name="naddress" placeholder="NEW MAILING ADDRESS" size="50" /><br />
+
+<input type="text" name="nCSZ" placeholder="CITY, STATE, ZIP CODE" size="50" />
+<input type="text" name="ncounty" placeholder="COUNTY" size="20" />
