@@ -8,7 +8,7 @@ namespace DMV.Models
 {
     public class Person
     {
-        [Display(Name = "Customer Number"), Required]
+        [Display(Name = "Customer Number:"), Required]
         public int ID { get; set; }
 
         [Display(Name = "Date of birth:"), DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}"), Required]

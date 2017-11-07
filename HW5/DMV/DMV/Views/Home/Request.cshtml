@@ -1,8 +1,8 @@
-﻿
+﻿@model DMV.Models.Person
+
 @{
     ViewBag.Title = "Request";
 }
-
 <h2><b> CHANGE OF ADDRESS NOTICE </b></h2>
 <h2><b> FOR DMV RECORDS </b></h2>
 
@@ -10,32 +10,92 @@
 
 @* id, dob, lname, fname, mname, address, city, state, zip, country *@
  @*New address, ncity, nstate, nzip, ncountry, date*@
+@using (Html.BeginForm())
+{ 
+    @Html.AntiForgeryToken()
 
-<label for="ID"> ID </label>
-<input type="number" name="ID"  placeholder="ODL/PERMIT/ID/CUSTOMER #"  />
+    <div class="form-horizontal">
+        <h4>User</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-<p> <b>DATE OF BIRTH </b>(MM/DD/YYYY)</p>
-<label for="DOB">  </label>
-<input type="date" name="DOB" value="" /><br />
+        <div class="form-group">
+            @Html.LabelFor(model => model.DOB, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DOB, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-<label for="name"> FULL LEGALE NAME (Print last, first, middle) </label>
-<input type="text" name="name" placeholder="Seed, Johnny, Apple" size="50" />
+        <div class="form-group">
+            @Html.LabelFor(model => model.rAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.rAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.rAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-<p><b>NEW RESIDENCE ADDRESS</b>(No Post Office Box Number or mail forwarding address)</p>
-<label for="address"> </label>
-<input type="text" name="address" placeholder="NEW RESIDENCE ADDRESS" size="50"/><br />
+        <div class="form-group">
+            @Html.LabelFor(model => model.CSZ, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CSZ, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CSZ, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-<input type="text" name="CSZ" placeholder="CITY, STATE, ZIP CODE" size="50"/>
-<input type="text" name="county" placeholder="COUNTY" size="20"/>
+        <div class="form-group">
+            @Html.LabelFor(model => model.County, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.County, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.County, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-<p><b>NEW MAILING ADDRESS</b>(If different from residence address above; Post Office Box Number or mail forwarding address goes here.)</p>
+        <div class="form-group">
+            @Html.LabelFor(model => model.nAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-<label for="naddress"> </label>
-<input type="text" name="naddress" placeholder="NEW MAILING ADDRESS" size="50" /><br />
+        <div class="form-group">
+            @Html.LabelFor(model => model.nCSZ, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nCSZ, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nCSZ, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-<input type="text" name="nCSZ" placeholder="CITY, STATE, ZIP CODE" size="50" />
-<input type="text" name="ncounty" placeholder="COUNTY" size="20" />
+        <div class="form-group">
+            @Html.LabelFor(model => model.nCounty, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.rAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nCounty, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-<button class="btn btn-primary" id="createPerson"> Create </button>
+        <div class="form-group">
+            @Html.LabelFor(model => model.sDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.sDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.sDate, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-@Html.ActionLink("Back","Index")
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    }
+
+@Html.ActionLink("Back","Awaiting")

@@ -27,16 +27,16 @@
         @foreach (var item in Model)
         {
                 <tr>
-                    <th>@Html.DisplayNameFor(model => model.ID)th>
-                    <th>@Html.DisplayNameFor(model => model.FullName)</th>
-                    <th>@Html.DisplayNameFor(model => model.DOB)</th>
-                    <th>@Html.DisplayNameFor(model => model.rAddress)</th>
-                    <th>@Html.DisplayNameFor(model => model.CSZ)</th>
-                    <th>@Html.DisplayNameFor(model => model.County)</th>
-                    <th>@Html.DisplayNameFor(model => model.nAddress)</th>
-                    <th>@Html.DisplayNameFor(model => model.nCSZ)</th>
-                    <th>@Html.DisplayNameFor(model => model.nCounty)</th>
-                    <th>@Html.DisplayNameFor(model => model.sDate)</th>
+                    <th>@Html.DisplayFor(modelItem => item.ID)th>
+                    <th>@Html.DisplayFor(modelItem => item.FullName)</th>
+                    <th>@Html.DisplayFor(modelItem => item.DOB)</th>
+                    <th>@Html.DisplayFor(modelItem => item.rAddress)</th>
+                    <th>@Html.DisplayFor(modelItem => item.CSZ)</th>
+                    <th>@Html.DisplayFor(modelItem => item.County)</th>
+                    <th>@Html.DisplayFor(modelItem => item.nAddress)</th>
+                    <th>@Html.DisplayFor(modelItem => item.nCSZ)</th>
+                    <th>@Html.DisplayFor(modelItem => item.nCounty)</th>
+                    <th>@Html.DisplayFor(modelItem => item.sDate)</th>
                 </tr>
                 }
             </table>

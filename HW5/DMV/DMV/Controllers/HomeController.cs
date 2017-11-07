@@ -15,10 +15,24 @@ namespace DMV.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult Request()
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Request([Bind(Include = "DOB, FullName, rAddress, CSZ, County, nAddress, nCSZ, nCounty, sDate")]Person person)
+        {
+            if(ModelState.IsValid)
+            {
+                db.Persons.Add(person);
+                db.SaveChanges();
+                return RedirectToAction("Awaiting");
+            }
+            return View();
+        }
+
 
         public ActionResult Awaiting()
         {
