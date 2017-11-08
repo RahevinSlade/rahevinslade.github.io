@@ -11,7 +11,7 @@
   
     <table>
         <tr>
-            <th>@Html.DisplayNameFor(model => model.ID)th>
+            <th>@Html.DisplayNameFor(model => model.ID) </th>
             <th>@Html.DisplayNameFor(model => model.FullName)</th>
             <th>@Html.DisplayNameFor(model => model.DOB)</th>
             <th>@Html.DisplayNameFor(model => model.rAddress)</th>
@@ -27,16 +27,16 @@
         @foreach (var item in Model)
         {
                 <tr>
-                    <th>@Html.DisplayFor(modelItem => item.ID)th>
-                    <th>@Html.DisplayFor(modelItem => item.FullName)</th>
-                    <th>@Html.DisplayFor(modelItem => item.DOB)</th>
-                    <th>@Html.DisplayFor(modelItem => item.rAddress)</th>
-                    <th>@Html.DisplayFor(modelItem => item.CSZ)</th>
-                    <th>@Html.DisplayFor(modelItem => item.County)</th>
-                    <th>@Html.DisplayFor(modelItem => item.nAddress)</th>
-                    <th>@Html.DisplayFor(modelItem => item.nCSZ)</th>
-                    <th>@Html.DisplayFor(modelItem => item.nCounty)</th>
-                    <th>@Html.DisplayFor(modelItem => item.sDate)</th>
+                    <td>@Html.DisplayFor(modelItem => item.ID) </td>
+                    <td>@Html.DisplayFor(modelItem => item.FullName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DOB)</td>
+                    <td>@Html.DisplayFor(modelItem => item.rAddress)</td>
+                    <td>@Html.DisplayFor(modelItem => item.CSZ)</td>
+                    <td>@Html.DisplayFor(modelItem => item.County)</td>
+                    <td>@Html.DisplayFor(modelItem => item.nAddress)</td>
+                    <td>@Html.DisplayFor(modelItem => item.nCSZ)</td>
+                    <td>@Html.DisplayFor(modelItem => item.nCounty)</td>
+                    <td>@Html.DisplayFor(modelItem => item.sDate)</td>
                 </tr>
                 }
             </table>
