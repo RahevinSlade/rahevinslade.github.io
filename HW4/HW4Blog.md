@@ -162,3 +162,5 @@ Snippet from the HomeController for Loans
             double payment = top / (1 - bottom);
 ```
 After we compute the math, we then tell the user all the information they entered in, then we tell them the monthly pay for the number of terms they wish to pay off their loan. 
+
+Find it in my GitHub [here](https://github.com/RahevinSlade/rahevinslade.github.io/tree/master/HW4/Forms/Forms)
