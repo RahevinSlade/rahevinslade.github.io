@@ -164,3 +164,23 @@ Snippet from the HomeController for Loans
 After we compute the math, we then tell the user all the information they entered in, then we tell them the monthly pay for the number of terms they wish to pay off their loan. 
 
 Find it in my GitHub [here](https://github.com/RahevinSlade/rahevinslade.github.io/tree/master/HW4/Forms/Forms)
+
+Screen Shots!
+
+Here's the controllers, that holds all of our information of views.
+![HomeController of project](HomeController.PNG) 
+
+Here is the loan model I am using for this project, this send errors to the user if the input is bad.
+![Model of project](Model.PNG) 
+
+This is the landing page or Home page.
+![Home of project](Home.PNG) 
+
+This is the Fraction or Percent Converter page, this takes in two numbers from the user and a "d" if the user wants a decimal, or a "p" if they wish to see it in a percent form.
+![Converter of project](Convert.PNG)
+
+This is the form of the project, which takes in first/last name from the user and a number and generates a new gamertag for them. Then displays it through ViewBag.newgt (new game tag)
+![Form of project](Form.PNG)
+
+Lastly I decided to create the LoanCalc described in the homework, which takes in three numberals from the user and calculates how much a user needs per month to pay off their loans. Then after the user Submits it takes them to a new page and displays their results.
+![Loan of project](Loan.PNG)

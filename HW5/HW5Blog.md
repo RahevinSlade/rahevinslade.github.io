@@ -215,3 +215,14 @@ Find it in my Github [here](https://github.com/RahevinSlade/rahevinslade.github.
 ![Screenshot of Awaiting Page](Awaiting.PNG)
 ![Screenshot of Emptying and resting the table](DownUp.PNG)
 ![Screenshot of Original Awaiting Page](Reset.PNG)
+
+ScreenShots of Code!
+
+Here is the HomeController that will create our database to use, manage views, and what to do with them.
+![HomeController Page](HomeController.PNG)
+
+Here is where we actually create the table and populate it with 5 examples, not a whole lot of original inputs..
+![Up Page](Up.PNG)
+
+And respectfull this is the down page, where we remove all people from the table, thus clearing the data
+![Down Page](Down.PNG)
