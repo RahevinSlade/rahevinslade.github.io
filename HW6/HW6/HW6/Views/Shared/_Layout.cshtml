@@ -10,7 +10,9 @@
 </head>
 <body>
 
-    @{
+    @*This is the layout of the land, basically, it apart of all pages, where the user can navigate through the displays of product to view items at their leirsure*@
+
+    @{// dont actually need this I just found out. 
         int defaultPage = 1;
     }
     <div class="navbar navbar-default navbar-fixed-top gradient">
@@ -26,19 +28,23 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <!--Bikes category-->
+                    @*here is the drop menu, first we have the four main drop downs followed by their subcategory*@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bikes<span class="caret"></span></a>
                         <ul class="dropdown-menu gradient">
-                            <li>@Html.ActionLink("Mountain Bikes", "BikeProducts", "Home", new { subCategory = "Mountain Bikes", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Road Bikes", "BikeProducts", "Home", new { subCategory = "Road Bikes", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Touring Bikes", "BikeProducts", "Home", new { subCategory = "Touring Bikes", defaultPage }, null)</li>
+                            <li>@Html.ActionLink("Display All", "BikeProducts", "Home", null, null)</li>
+                            <li>@Html.ActionLink("Mountain Bikes", "BikeProducts", "Home", new { subCategory = "Mountain", defaultPage }, null)</li>
+                            <li>@Html.ActionLink("Road Bikes", "BikeProducts", "Home", new { subCategory = "Road", defaultPage }, null)</li>
+                            <li>@Html.ActionLink("Touring Bikes", "BikeProducts", "Home", new { subCategory = "Touring", defaultPage }, null)</li>
                         </ul>
                     </li>
                     <!--Clothings-->
+                    @*Features includes a display all or a dislplay by subcategory, for all kinds of users*@ 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clothing<span class="caret"></span></a>
                         <ul class="dropdown-menu gradient">
-                            <li>@Html.ActionLink("Bib Shorts", "ClothingProduct", "Home", new { subCategory = "Bib-Shorts", defaultPage }, null)</li>
+                            <li>@Html.ActionLink("Display All", "ClothingProduct", "Home", new { subCategory = "Display All" }, null)</li>
+                            <li>@Html.ActionLink("Bib Shorts", "ClothingProduct", "Home", new { subCategory = "Bib-Shorts"}, null)</li>
                             <li>@Html.ActionLink("Caps", "ClothingProduct", "Home", new { subCategory = "Caps", defaultPage }, null)</li>
                             <li>@Html.ActionLink("Gloves", "ClothingProduct", "Home", new { subCategory = "Gloves", defaultPage }, null)</li>
                             <li>@Html.ActionLink("Jerseys", "ClothingProduct", "Home", new { subCategory = "Jerseys", defaultPage }, null)</li>
@@ -52,6 +58,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accessories<span class="caret"></span></a>
                         <ul class="dropdown-menu gradient">
+                            <li>@Html.ActionLink("Display All", "AccessProduct", "Home", new { subCategory = "Display All" }, null)</li>
                             <li>@Html.ActionLink("Bike Racks", "AccessProduct", "Home", new { subCategory = "Bike Racks", defaultPage }, null)</li>
                             <li>@Html.ActionLink("Bike Stands", "AccessProduct", "Home", new { subCategory = "Bike Stands", defaultPage }, null)</li>
                             <li>@Html.ActionLink("Bottles and Cages", "AccessProduct", "Home", new { subCategory = "Bottles and Cages", defaultPage }, null)</li>
@@ -69,20 +76,21 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Components<span class="caret"></span></a>
                         <ul class="dropdown-menu gradient">
-                            <li>@Html.ActionLink("Handlebars", "ComponentProducts", "Home", new { subCategory = "Handlebars", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Bottom Brackets", "ComponentProducts", "Home", new { subCategory = "Bottom Brackets", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Brakes", "ComponentProducts", "Home", new { subCategory = "Brakes", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Chains", "ComponentProducts", "Home", new { subCategory = "Chains", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Cranksets", "ComponentProducts", "Home", new { subCategory = "Cranksets", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Derailleurs", "ComponentProducts", "Home", new { subCategory = "Derailleurs", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Forks", "ComponentProducts", "Home", new { subCategory = "Forks", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Headsets", "ComponentProducts", "Home", new { subCategory = "Headsets", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Mountain Frames", "ComponentProducts", "Home", new { subCategory = "Mountain Frames", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Pedals", "ComponentProducts", "Home", new { subCategory = "Pedals", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Road Frames", "ComponentProducts", "Home", new { subCategory = "Road Frames", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Saddles", "ComponentProducts", "Home", new { subCategory = "Saddles", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Touring Frames", "ComponentProducts", "Home", new { subCategory = "Touring Frames", defaultPage }, null)</li>
-                            <li>@Html.ActionLink("Wheels", "ComponentProducts", "Home", new { subCategory = "Wheels", defaultPage }, null)</li>
+                            <li>@Html.ActionLink("Display All", "ComponentProducts", "Home", new {subCategory = "Display All" }, null)</li>
+                            <li>@Html.ActionLink("Handlebars", "ComponentProducts", "Home", new { subCategory = "Handlebars"}, null)</li>
+                            <li>@Html.ActionLink("Bottom Brackets", "ComponentProducts", "Home", new { subCategory = "Bottom Brackets" }, null)</li>
+                            <li>@Html.ActionLink("Brakes", "ComponentProducts", "Home", new { subCategory = "Brakes" }, null)</li>
+                            <li>@Html.ActionLink("Chains", "ComponentProducts", "Home", new { subCategory = "Chains" }, null)</li>
+                            <li>@Html.ActionLink("Cranksets", "ComponentProducts", "Home", new { subCategory = "Cranksets"}, null)</li>
+                            <li>@Html.ActionLink("Derailleurs", "ComponentProducts", "Home", new { subCategory = "Derailleurs" }, null)</li>
+                            <li>@Html.ActionLink("Forks", "ComponentProducts", "Home", new { subCategory = "Forks" }, null)</li>
+                            <li>@Html.ActionLink("Headsets", "ComponentProducts", "Home", new { subCategory = "Headsets"}, null)</li>
+                            <li>@Html.ActionLink("Mountain Frames", "ComponentProducts", "Home", new { subCategory = "Mountain Frames"}, null)</li>
+                            <li>@Html.ActionLink("Pedals", "ComponentProducts", "Home", new { subCategory = "Pedals"}, null)</li>
+                            <li>@Html.ActionLink("Road Frames", "ComponentProducts", "Home", new { subCategory = "Road Frames" }, null)</li>
+                            <li>@Html.ActionLink("Saddles", "ComponentProducts", "Home", new { subCategory = "Saddles"}, null)</li>
+                            <li>@Html.ActionLink("Touring Frames", "ComponentProducts", "Home", new { subCategory = "Touring Frames" }, null)</li>
+                            <li>@Html.ActionLink("Wheels", "ComponentProducts", "Home", new { subCategory = "Wheels" }, null)</li>
                         </ul>
                     </li>
                 </ul>

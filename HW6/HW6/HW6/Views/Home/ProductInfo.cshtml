@@ -6,6 +6,8 @@
 
 <h2>@Html.DisplayFor(model => model.Name)</h2>
 
+@*This page will display Product Information, along with Image if there is one in the database for it, along with reviews and a link to create review down at the bottom*@
+
 <div>
     <hr />
     <div class="row">
@@ -116,4 +118,4 @@
         </dl>
     </div>
 </div>
-<a href="@Url.Action("UserReview", "Home", new { id = Model.ProductID})"class="btn btn-primary"> Product Reviews</a>
+<a href="@Url.Action("UserReview", "Home", new { id = Model.ProductID})"class="btn btn-primary"> Make a Review</a>
