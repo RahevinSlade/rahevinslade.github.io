@@ -158,7 +158,31 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BillOfMaterial.cs" />
+    <Compile Include="Models\Culture.cs" />
     <Compile Include="Models\HW6Context.cs" />
+    <Compile Include="Models\Illustration.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductCategory.cs" />
+    <Compile Include="Models\ProductCostHistory.cs" />
+    <Compile Include="Models\ProductDescription.cs" />
+    <Compile Include="Models\ProductDocument.cs" />
+    <Compile Include="Models\ProductInventory.cs" />
+    <Compile Include="Models\ProductListPriceHistory.cs" />
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\ProductModelIllustration.cs" />
+    <Compile Include="Models\ProductModelProductDescriptionCulture.cs" />
+    <Compile Include="Models\ProductPhoto.cs" />
+    <Compile Include="Models\ProductProductPhoto.cs" />
+    <Compile Include="Models\ProductReview.cs" />
+    <Compile Include="Models\ProductSubcategory.cs" />
+    <Compile Include="Models\ScrapReason.cs" />
+    <Compile Include="Models\TransactionHistory.cs" />
+    <Compile Include="Models\TransactionHistoryArchive.cs" />
+    <Compile Include="Models\UnitMeasure.cs" />
+    <Compile Include="Models\WorkOrder.cs" />
+    <Compile Include="Models\WorkOrderRouting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +216,7 @@
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\findImage.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
