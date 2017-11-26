@@ -190,6 +190,7 @@
     <Content Include="App_Data\Pull.sql" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PageDisplay.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -199,6 +200,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\Home\BikeProducts.cshtml" />
+    <Content Include="Views\Home\ProductInfo.cshtml" />
+    <Content Include="Views\Home\UserReview.cshtml" />
+    <Content Include="Views\Home\AccessProduct.cshtml" />
+    <Content Include="Views\Home\ClothingProduct.cshtml" />
+    <Content Include="Views\Home\ComponentProducts.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />

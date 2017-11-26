@@ -1,0 +1,45 @@
+﻿@model IEnumerable<HW6.Models.Product>
+
+@{ 
+    ViewBag.Title = "ClothingProduct";
+}
+
+<h1>@ViewBag.Clothing</h1>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StandardCost)
+        </th>
+        <th>
+            Details
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        if (item.DiscontinuedDate >= DateTime.Today || item.DiscontinuedDate == null)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StandardCost)
+                </td>
+                <td>
+                    @Html.ActionLink("ProductInfo", "ProductInfo", "Home", new { id = Html.DisplayFor(modelItem => item.ProductID) }, null)
+                </td>
+            </tr>
+        }
+    }
+</table>

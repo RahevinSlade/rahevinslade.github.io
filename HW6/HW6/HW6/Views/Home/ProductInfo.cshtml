@@ -1,0 +1,119 @@
+﻿@model HW6.Models.Product
+
+@{ 
+    ViewBag.Title = "ProductInfo";
+}
+
+<h2>@Html.DisplayFor(model => model.Name)</h2>
+
+<div>
+    <hr />
+    <div class="row">
+        <div class="col-lg-6">
+            <img class="img-responsive" src="@ViewBag.image" alt="Broken Img Src" />
+        </div>
+        <div class="col-lg-6">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                @if (Model.Color != null)
+            {
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Color)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Color)
+                    </dd>
+                }
+                <dt>
+                    @Html.DisplayNameFor(model => model.StandardCost)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.StandardCost)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ListPrice)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ListPrice)
+                </dd>
+
+                @if (Model.Size != null)
+            {
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Size)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Size)
+                    </dd>
+                }
+                @if (Model.Weight != null)
+            {
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Weight)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Weight)
+                    </dd>
+                }
+                @if (Model.ProductLine != null)
+            {
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ProductLine)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ProductLine)
+                    </dd>
+                }
+                @if (Model.Class != null)
+            {
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Class)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Class)
+                    </dd>
+
+                }
+                @if (Model.Style != null)
+            {
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Style)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Style)
+                    </dd>
+                }
+            </dl>
+        </div>
+        <dl>
+            <dt>
+                Reviews
+            </dt>
+            <dd>
+                @foreach (var review in Model.ProductReviews)
+            {
+                    <hr />
+                    <p><b>Rating:</b> @review.Rating</p>
+                    <p><b>Reviewer:</b> @review.ReviewerName <b>Date:</b> @review.ReviewDate</p>
+                        <p>@review.Comments</p>
+                }
+            </dd>
+        </dl>
+    </div>
+</div>
+<a href="@Url.Action("UserReview", "Home", new { id = Model.ProductID})"class="btn btn-primary"> Product Reviews</a>
