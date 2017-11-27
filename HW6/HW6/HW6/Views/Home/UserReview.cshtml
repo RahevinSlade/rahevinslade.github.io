@@ -47,7 +47,7 @@ Leaving an email address allows Contact Support to get ahold of the user when ne
                     @Html.ValidationMessageFor(model => model.EmailAddress, "", new { @class = "text-danger" })
                 </div>
                 
-                <div class="col-md-4"><!--Review Rating-->
+                <div class="col-md-4"><!--Review Rating, maxes at 5, if greater it goes back to 5-->
                     @Html.LabelFor(model => model.Rating, htmlAttributes: new { @class = "control-label" })
                     @Html.EditorFor(model => model.Rating, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Rating, "", new { @class = "text-danger" })
@@ -63,12 +63,18 @@ Leaving an email address allows Contact Support to get ahold of the user when ne
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <input type="submit" value="Submit Review" class="btn btn-default" />
+                    <input type="submit" value="Submit Review" class="btn btn-default" onclick="Thanks()" />
                 </div>
             </div>
         </div>
     </div>
 }
+
+<script>
+    function Thanks() {
+        alert("Thank you!")
+    }
+</script>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
