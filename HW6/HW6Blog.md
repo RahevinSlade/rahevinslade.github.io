@@ -76,6 +76,6 @@ A look at the database after a Review has been made
 
 Heres a Video Demonstration!
 
-<video width="400" height="222" controls="controls">
+<video width="1000" height="666" controls="controls">
   <source src="Demo.mp4" type="video/mp4" />
 </video>
