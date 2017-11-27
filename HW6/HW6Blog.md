@@ -15,9 +15,12 @@ MOVE 'AdventureWorks2014_Log' TO 'C:\Users\Rahevin\Documents\CurrentClasses\CS 4
 
 2) Create an empty MVC, add the database, reverse engineer model classes. 
 
-inside look of the Context Model page
+inside look of the Context Model page.
+
 ![Screenshot of Home Page](ContextModel.PNG)
+
 a Look at all models used for this assignment.
+
 ![Screenshot of Home Page](Models.PNG)
 
 3) Feature 1: Browse Products, user should be about to organize by top level category, then by sub-category. 
@@ -73,8 +76,6 @@ A look at the database after a Review has been made
 
 Heres a Video Demonstration!
 
-<video controls="controls">
-  <source type="video/mp4" src="Demo.mp4"></source>
-  <source type="video/webm" src="Demo.webm"></source>
-  <p>Your browser does not support the video element.</p>
+<video width="400" height="222" controls="controls">
+  <source src="Demo.mp4" type="video/mp4" />
 </video>
