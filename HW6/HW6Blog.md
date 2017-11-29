@@ -74,8 +74,12 @@ Here is how the Productinfomation is created for each item
 A look at the database after a Review has been made
 ![Screenshot of Home Page](Data.PNG)
 
+Find it in my GitHub [here](https://github.com/RahevinSlade/rahevinslade.github.io/tree/master/HW6/HW6/HW6)
+
 Heres a Video Demonstration!
 
 <video width="1000" height="666" controls="controls">
   <source src="Demo.mp4" type="video/mp4" />
 </video>
+
+self-note (I just relized that I could condense the pagesin view that I created for each product category into one page, which probably would have saved some time rather than make four different views for bikes, accessories, components and clothing.)
