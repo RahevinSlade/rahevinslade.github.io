@@ -14,5 +14,8 @@ namespace HW8.DAL
 
         }
         public virtual DbSet<Artist> Artists { get; set; }
+        public virtual DbSet<ArtWork> ArtWorks { get; set; }
+        public virtual DbSet<Genre> Genres { get; set; }
+ 
     }
 }

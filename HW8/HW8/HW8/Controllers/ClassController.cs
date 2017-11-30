@@ -12,19 +12,9 @@ using System.Diagnostics;
 
 namespace HW8.Controllers
 {
-    public class HomeController : Controller
+    public class ClassController : Controller
     {
         private ArtistContext db = new ArtistContext();
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult ArtistView()
-        {
-            return View(db.Artists.ToList());
-        }
 
         public ActionResult ClassView()
         {
