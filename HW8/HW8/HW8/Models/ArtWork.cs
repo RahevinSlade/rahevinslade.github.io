@@ -7,8 +7,8 @@ using System.Data.Entity.Spatial;
 
 namespace HW8.Models
 {
-    [Table("Artist")]
-    public class ArtWork
+    [Table("ArtWork")]
+    public partial class ArtWork
     {
         public ArtWork()
         {
@@ -22,7 +22,7 @@ namespace HW8.Models
         [Display(Name = "ArtistName:"), Required]
         public string ArtistName { get; set; }
 
-        public virtual Artist Works { get; set; }
+        public virtual Artist Artist1 { get; set; }
 
         public virtual ICollection<Genre> Genres { get; set; }
     }

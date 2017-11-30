@@ -6,21 +6,20 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace HW8.Controllers
 {
-    public class HomeController : Controller
+    public class ArtWorkController : Controller
     {
         public ArtistContext db = new ArtistContext();
 
-        public ActionResult Index()
+
+        public ActionResult ArtWorkView()
         {
-            return View();
+            var artworks = db.ArtWorks.Include(a => a.Artist1);
+            return View(artworks.ToList());
         }
 
-        public ActionResult ArtistView()
-        {
-            return View(db.Artists.ToList());
-        }
     }
 }

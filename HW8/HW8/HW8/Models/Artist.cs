@@ -8,7 +8,7 @@ using System.Data.Entity.Spatial;
 namespace HW8.Models
 {
     [Table("Artist")]
-    public class Artist
+    public partial class Artist
     {
         public Artist()
         {

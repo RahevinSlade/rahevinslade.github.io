@@ -4,7 +4,8 @@ CREATE TABLE dbo.Artist
 		ArtistName NVARCHAR(50) NOT NULL,
 		DOB DATE NOT NULL,
 		BirthCity NVARCHAR(50) NOT NULL,
-		PRIMARY KEY (ArtistName ASC)
+		Constraint [PK_dbo.ArtistName] Primary KEY clustered (ArtistName ASC)
+		--PRIMARY KEY (ArtistName ASC)
 
 );
 
@@ -13,8 +14,10 @@ CREATE TABLE dbo.ArtWork
 (
 	Title NVarchar(50) NOT NULL,
 	ArtistName NVarchar(50) NOT NULL,
-	PRIMARY KEY (Title ASC),
-	FOREIGN KEY(ArtistName) REFERENCES Artist(ArtistName)
+	Constraint [PK_dbo.Title] Primary key clustered (Title Asc),
+	Constraint [FK_dbo.ArtistName] Foreign Key (ArtistName) References dbo.Artist(ArtistName)
+	--PRIMARY KEY (Title ASC),
+	--FOREIGN KEY(ArtistName) REFERENCES Artist(ArtistName)
 );
 
 

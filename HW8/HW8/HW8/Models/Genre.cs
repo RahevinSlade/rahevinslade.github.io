@@ -1,16 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Spatial;
 
 namespace HW8.Models
 {
-    public class Genre
+    [Table("Genre")]
+    public partial class Genre
     {
+        public Genre()
+        {
+            ArtWorks = new HashSet<ArtWork>();
+        }
+
         [Key]
         [Display(Name = "Genre:"), Required]
         public string GenreName { get; set; }
+
+        public virtual ICollection<ArtWork> ArtWorks { get; set; }
 
     }
 }

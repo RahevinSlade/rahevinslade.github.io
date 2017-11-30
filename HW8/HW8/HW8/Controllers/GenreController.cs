@@ -9,18 +9,14 @@ using System.Web.Mvc;
 
 namespace HW8.Controllers
 {
-    public class HomeController : Controller
+    public class GenreController : Controller
     {
         public ArtistContext db = new ArtistContext();
 
-        public ActionResult Index()
+        public ActionResult GenreView()
         {
-            return View();
+            return View(db.Genres.ToList());
         }
 
-        public ActionResult ArtistView()
-        {
-            return View(db.Artists.ToList());
-        }
     }
 }

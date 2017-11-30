@@ -148,7 +148,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ClassController.cs" />
+    <Compile Include="Controllers\ArtWorkController.cs" />
+    <Compile Include="Controllers\ClassificationController.cs" />
+    <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\ArtistContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -202,12 +204,12 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\ArtWorkView.cshtml" />
+    <Content Include="Views\ArtWorks\ArtWorkView.cshtml" />
     <Content Include="Views\Home\ArtistView.cshtml" />
-    <Content Include="Views\Home\ClassView.cshtml" />
+    <Content Include="Views\Classification\ClassView.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Class\" />
+    <Folder Include="Views\Genre\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
