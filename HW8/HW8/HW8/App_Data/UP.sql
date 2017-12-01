@@ -1,43 +1,47 @@
 ﻿
-CREATE TABLE dbo.Artist
+CREATE TABLE dbo.Artists
 (
+		ArtistID INT Identity(1,1) NOT NULL,
 		ArtistName NVARCHAR(50) NOT NULL,
-		DOB DATE NOT NULL,
+		DOB Nvarchar(10) NOT NULL,
 		BirthCity NVARCHAR(50) NOT NULL,
-		Constraint [PK_dbo.ArtistName] Primary KEY clustered (ArtistName ASC)
+		Constraint [PK_dbo.Artists] Primary KEY clustered (ArtistID ASC)
 		--PRIMARY KEY (ArtistName ASC)
 
 );
 
 
-CREATE TABLE dbo.ArtWork
+CREATE TABLE dbo.ArtWorks
 (
+	ArtWorkID INT Identity (1,1) NOT NULL,
 	Title NVarchar(50) NOT NULL,
-	ArtistName NVarchar(50) NOT NULL,
-	Constraint [PK_dbo.Title] Primary key clustered (Title Asc),
-	Constraint [FK_dbo.ArtistName] Foreign Key (ArtistName) References dbo.Artist(ArtistName)
+	ArtistID INT NOT NULL,
+	Constraint [PK_dbo.ArtWorks] Primary key clustered (ArtWorkID Asc),
+	Constraint [FK_dbo.ArtWorks_Artists] Foreign Key (ArtistID) References dbo.Artists(ArtistID)
 	--PRIMARY KEY (Title ASC),
 	--FOREIGN KEY(ArtistName) REFERENCES Artist(ArtistName)
 );
 
 
-CREATE TABLE dbo.Genre
+CREATE TABLE dbo.Genres
 (
+	GenreID INT Identity (1,1) NOT NULL,
 	GenreName NVARCHAR(40) NOT NULL,
-	CONSTRAINT [PK_dbo.Genre] PRIMARY KEY CLUSTERED (GenreName ASC)
+	CONSTRAINT [PK_dbo.Genres] PRIMARY KEY CLUSTERED (GenreID ASC)
 );
 
 
-CREATE TABLE dbo.Classification
+CREATE TABLE dbo.Classifications
 (
-	Title NVarchar(50) NOT NULL,
-	Genre NVARCHAR(40) NOT NULL,
-	CONSTRAINT [PK_dbo.Artwork_Genre] PRIMARY KEY CLUSTERED (Title, Genre ASC),
-	CONSTRAINT [FK_dbo.ArtWork] FOREIGN KEY (Title) REFERENCES dbo.ArtWork(Title),
-	CONSTRAINT [FK_dbo.Genre] FOREIGN KEY (Genre) REFERENCES dbo.Genre(GenreName)
+	ClassificationID int Identity(1,1) NOT NULL,
+	ArtWorkID INT NOT NULL,
+	GenreID INT NOT NULL,
+	CONSTRAINT [PK_dbo.Classifications] PRIMARY KEY CLUSTERED (ClassificationID ASC),
+	CONSTRAINT [FK_dbo.ArtWorks_Classifications] FOREIGN KEY (ArtWorkID) REFERENCES dbo.ArtWorks(ArtWorkID),
+	CONSTRAINT [FK_dbo.Genre_Classifications] FOREIGN KEY (GenreID) REFERENCES dbo.Genres(GenreID)
 );
 
-INSERT INTO dbo.Artist
+INSERT INTO dbo.Artists
 (
 	ArtistName,
 	DOB,
@@ -49,7 +53,7 @@ VALUES
 	('Hatip Mehmed Efendi','11/18/1680','Unknown'),
 	('Salvador Dali','05/11/1904','Figueres, Spain');
 
-INSERT INTO dbo.Genre
+INSERT INTO dbo.Genres
 (
     GenreName
 )
@@ -59,31 +63,31 @@ VALUES
 ('Portrait'),
 ('Renaissance');
 
-INSERT INTO dbo.ArtWork
+INSERT INTO dbo.ArtWorks
 (
 	Title,
-	ArtistName
+	ArtistID
 )
 VALUES
-	('Circle Limit III', 'MC Escher'),
-	('Twon Tree', 'MC Escher'),
-	('Mona Lisa', 'Leonardo Da Vinci'),
-	('The Vitruvian Man','Leonardo Da Vinci'),
-	('Ebru','Hatip Mehmed Efendi'),
-	('Honey Is Sweeter Than Blood','Salvador Dali');
+	('Circle Limit III', '1'),
+	('Twon Tree', '1'),
+	('Mona Lisa', '2'),
+	('The Vitruvian Man','2'),
+	('Ebru','3'),
+	('Honey Is Sweeter Than Blood','4');
 
-INSERT INTO dbo.Classification
+INSERT INTO dbo.Classifications
 (
-    Title,
-    Genre
+    ArtWorkID,
+    GenreID
 )
 VALUES
-( 'Circle Limit III', 'Tesselation' ),
-( 'Twon Tree', 'Tesselation' ),
-( 'Twon Tree', 'Surrealism' ),
-( 'Mona Lisa', 'Portrait' ),
-( 'Mona Lisa', 'Renaissance' ),
-( 'The Vitruvian Man', 'Renaissance' ),
-( 'Ebru', 'Tesselation' ),
-( 'Honey Is Sweeter Than Blood', 'Surrealism' );
+( '1', '1' ),
+( '2', '1' ),
+( '2', '2' ),
+( '3', '3' ),
+( '3', '4' ),
+( '4', '4' ),
+( '5', '4' ),
+( '6', '2' );
 GO

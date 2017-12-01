@@ -1,0 +1,39 @@
+﻿@model IEnumerable<HW8.Models.Classification>
+
+@{
+    ViewBag.Title = "Classifications";
+}
+
+<h2>Classifications</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtWork.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre.GenreName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtWork.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genre.GenreName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ClassificationID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ClassificationID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ClassificationID })
+        </td>
+    </tr>
+}
+
+</table>

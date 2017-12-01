@@ -1,9 +1,9 @@
 ﻿
-DROP TABLE dbo.Classification;
+DROP TABLE dbo.Classifications;
 GO
-DROP TABLE dbo.ArtWork;
+DROP TABLE dbo.ArtWorks;
 GO
-DROP TABLE dbo.Artist;
+DROP TABLE dbo.Artists;
 GO
-DROP TABLE dbo.Genre;
+DROP TABLE dbo.Genres;
 GO

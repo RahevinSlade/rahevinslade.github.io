@@ -1,4 +1,41 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@model IEnumerable<HW8.Models.Genre>
 
+@{
+    ViewBag.Title = "Home Page";
+    string[] genres = { "Portrait", "Renaissance", "Surrealism", "Tesselation" };
+
+}
+<div class="genres">
+    @foreach (string g in genres)
+    {
+        <input type="button" class="btn btn-default" onclick="getArtWorkByGenre(this)" value="@($"{g}")"/>
+    }
+</div>
+
+@section Scripts
+{
+<script>
+    function getArtWorkByGenre(btnObj)
+    {
+        console.log("Button clicked is: " + btnObj.value);
+        var gtable = $("#genre-table");
+        gtable.empty();
+
+        document.ts = setTimeout("showSpinner()", 300);
+
+        $.ajax({
+            type: "get",
+            datatype: "json",
+            url: "/Home/Genres"
+            data: { genre: btnObj.value },
+            success: fucntion(data){
+                clearTimeout(document.ts);
+                populateTable(data);
+            },
+            error: function () {
+                alert("Error something went wrong :(");
+            }
+        });
+    }
+</script>
+}

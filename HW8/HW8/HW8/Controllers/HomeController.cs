@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace HW8.Controllers
 {
@@ -18,9 +19,6 @@ namespace HW8.Controllers
             return View();
         }
 
-        public ActionResult ArtistView()
-        {
-            return View(db.Artists.ToList());
-        }
+
     }
 }
