@@ -16,9 +16,24 @@ namespace HW8.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var genres = db.Genres;
+            return View(genres);
         }
 
+        public JsonResult Genre(int id)
+        {
+            var artwork = db.Genres.Find(id).Classifications.ToList().OrderBy(t => t.ArtWork.Title).Select(a => new { aw = a.ArtWorkID, awa = a.ArtWork.ArtistID }).ToList();
+            string[] artworkCreator = new string[artwork.Count()];
+            for (int i = 0; i < artworkCreator.Length; ++i)
+            {
+                artworkCreator[i] = $"<ul>{db.ArtWorks.Find(artwork[i].aw).Title} by {db.Artists.Find(artwork[i].awa).ArtistName}</ul>";
+            }
+            var data = new
+            {
+                arr = artworkCreator
+            };
 
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
     }
 }

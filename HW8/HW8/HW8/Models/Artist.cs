@@ -22,7 +22,7 @@ namespace HW8.Models
         public string ArtistName { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(64)]
         [Display(Name = "Date of Birth")]
         public string DOB { get; set; }
 

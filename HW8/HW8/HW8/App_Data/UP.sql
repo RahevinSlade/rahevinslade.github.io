@@ -3,7 +3,7 @@ CREATE TABLE dbo.Artists
 (
 		ArtistID INT Identity(1,1) NOT NULL,
 		ArtistName NVARCHAR(50) NOT NULL,
-		DOB Nvarchar(10) NOT NULL,
+		DOB Nvarchar(64) NOT NULL,
 		BirthCity NVARCHAR(50) NOT NULL,
 		Constraint [PK_dbo.Artists] Primary KEY clustered (ArtistID ASC)
 		--PRIMARY KEY (ArtistName ASC)
@@ -48,10 +48,10 @@ INSERT INTO dbo.Artists
 	BirthCity
 )
 VALUES
-	('MC Escher','06/17/1898', 'Leeuwarden, Netherlands' ),
-	('Leonardo Da Vinci', '05/02/1519', 'Vinci, Italy'),
-	('Hatip Mehmed Efendi','11/18/1680','Unknown'),
-	('Salvador Dali','05/11/1904','Figueres, Spain');
+	('MC Escher','June 17, 1898', 'Leeuwarden, Netherlands' ),
+	('Leonardo Da Vinci', 'May 2, 1519', 'Vinci, Italy'),
+	('Hatip Mehmed Efendi','November 11, 1680','Unknown'),
+	('Salvador Dali','May 11, 1904','Figueres, Spain');
 
 INSERT INTO dbo.Genres
 (

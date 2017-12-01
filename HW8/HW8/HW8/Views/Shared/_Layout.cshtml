@@ -37,6 +37,8 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("Javascript", required: false)
     @RenderSection("scripts", required: false)
+    @RenderSection("CustomScripts", required: false)
 </body>
 </html>
