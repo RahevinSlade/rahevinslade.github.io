@@ -153,6 +153,11 @@ namespace HW8.Controllers
                     TempData["testmsg"] = "<script>alert('Birth day out of bounds ');</script>";
                     return View();
                 }
+                else if (eArtist.ArtistName.Length > 50)
+                {
+                    TempData["testmsg"] = "<script>alert('No way your name is that long');</script>";
+                    return View();
+                }
 
                 eArtist.BirthCity = artist["BirthCity"];
 
