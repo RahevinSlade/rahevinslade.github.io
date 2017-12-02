@@ -6,7 +6,7 @@
 
 <h2>Edit</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm())//Edit if we try to edit someones birth day to the future
 {
     @Html.AntiForgeryToken()
     
@@ -23,6 +23,12 @@
                 @Html.ValidationMessageFor(model => model.ArtistName, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        @if (TempData["testmsg"] != null)//this is where we display the message box for date out of bounds
+        {
+            @Html.Raw(TempData["testmsg"])
+        }
+
 
         <div class="form-group">
             @Html.LabelFor(model => model.DOB, htmlAttributes: new { @class = "control-label col-md-2" })

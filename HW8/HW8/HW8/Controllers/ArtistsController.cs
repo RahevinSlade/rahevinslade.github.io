@@ -10,6 +10,9 @@ using HW8.DAL;
 using HW8.Models;
 using System.Diagnostics;
 
+//This controller is where we make the CRUD, and Index
+//we also go through and stop users putting their birthday into the future, psssh time travelers
+
 namespace HW8.Controllers
 {
     public class ArtistsController : Controller
@@ -60,7 +63,31 @@ namespace HW8.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ArtistName,DOB,BirthCity")]  Artist artist)
         {
-            if (ModelState.IsValid)
+            string[] DOB = artist.DOB.Split('/');//probably more effective way to check birth days but....
+            int ay = Int32.Parse(DOB[2]);
+            int am = Int32.Parse(DOB[0]);
+            int ad = Int32.Parse(DOB[1]);
+            int yyyy = DateTime.Now.Year;
+            int mm = DateTime.Now.Month;// jan is month 0
+            int dd = DateTime.Now.Day;
+            
+            if(ay > yyyy)
+            {
+                TempData["testmsg"] = "<script>alert('Birth day out of bounds ');</script>";
+                return View();           
+            }
+           else if(ay == yyyy && am > mm)
+            {
+                TempData["testmsg"] = "<script>alert('Birth day out of bounds ');</script>";
+                return View();
+            }
+            else if (ay == yyyy && am == mm && ad > dd)
+            {
+                TempData["testmsg"] = "<script>alert('Birth day out of bounds ');</script>";
+                return View();
+            }
+
+            else if (ModelState.IsValid)
             {
                 db.Artists.Add(artist);
                 db.SaveChanges();
@@ -78,6 +105,7 @@ namespace HW8.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Artist artist = db.Artists.Find(id);
+
             if (artist == null)
             {
                 return HttpNotFound();
@@ -92,12 +120,40 @@ namespace HW8.Controllers
         //[ValidateAntiForgeryToken]
         public ActionResult Edit(int id, FormCollection artist)
         {
+            
             if (ModelState.IsValid)
             {
                 var eArtist = db.Artists.Find(id);
 
                 eArtist.ArtistName= artist["ArtistName"];
                 eArtist.DOB = artist["DOB"];
+
+
+
+                string[] DOB = eArtist.DOB.Split('/');
+                int ay = Int32.Parse(DOB[2]);
+                int am = Int32.Parse(DOB[0]);
+                int ad = Int32.Parse(DOB[1]);
+                int yyyy = DateTime.Now.Year;
+                int mm = DateTime.Now.Month;// jan is month 0
+                int dd = DateTime.Now.Day;
+
+                if (ay > yyyy)
+                {
+                    TempData["testmsg"] = "<script>alert('Birth day out of bounds ');</script>";
+                    return View();
+                }
+                else if (ay == yyyy && am > mm)
+                {
+                    TempData["testmsg"] = "<script>alert('Birth day out of bounds ');</script>";
+                    return View();
+                }
+                else if (ay == yyyy && am == mm && ad > dd)
+                {
+                    TempData["testmsg"] = "<script>alert('Birth day out of bounds ');</script>";
+                    return View();
+                }
+
                 eArtist.BirthCity = artist["BirthCity"];
 
                 db.SaveChanges();

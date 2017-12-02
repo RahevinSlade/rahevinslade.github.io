@@ -1,4 +1,4 @@
-﻿function Ajax(id) {
+﻿function Ajax(id) {//How'dy this is the ajax, bit confusing but this essentially allows us to only display artist by genre'
     var source = "/Home/Genre/" + id;
     console.log(source);
     $.ajax({
@@ -11,7 +11,7 @@
     });
 }
 
-function displayResults(data) {
+function displayResults(data) {//this display well the results from our search through artist with certain genre
     console.log("AJAX Success!");
     console.log(data);
 

@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 
+
+//Welcome to the home controller, this is where we keep the index, and call for the json,. ajax info
 namespace HW8.Controllers
 {
     public class HomeController : Controller
