@@ -55,6 +55,8 @@ Demo's
 
 Find it in my GitHub [here](https://github.com/RahevinSlade/rahevinslade.github.io/tree/master/HW8/HW8/HW8)
 
+Press play below, it will look like nothing is happening for 5 seconds, then things will begin to happen.
+
 <video width="1000" height="666" controls="controls">
   <source src="Demo.mp4" type="video/mp4" />
 </video>

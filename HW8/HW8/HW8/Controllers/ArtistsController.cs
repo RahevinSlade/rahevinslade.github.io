@@ -141,22 +141,22 @@ namespace HW8.Controllers
                 if (ay > yyyy)
                 {
                     TempData["testmsg"] = "<script>alert('Birth day out of bounds ');</script>";
-                    return View();
+                    return RedirectToAction("Edit");
                 }
                 else if (ay == yyyy && am > mm)
                 {
                     TempData["testmsg"] = "<script>alert('Birth day out of bounds ');</script>";
-                    return View();
+                    return RedirectToAction("Edit");
                 }
                 else if (ay == yyyy && am == mm && ad > dd)
                 {
                     TempData["testmsg"] = "<script>alert('Birth day out of bounds ');</script>";
-                    return View();
+                    return RedirectToAction("Edit");
                 }
                 else if (eArtist.ArtistName.Length > 50)
                 {
                     TempData["testmsg"] = "<script>alert('No way your name is that long');</script>";
-                    return View();
+                    return RedirectToAction("Edit");
                 }
 
                 eArtist.BirthCity = artist["BirthCity"];
