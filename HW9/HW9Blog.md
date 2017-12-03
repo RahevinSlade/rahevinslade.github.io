@@ -10,6 +10,14 @@
 
 Steps on how to perform HW9 are below.
 
+Create a new branch on git
+
+![Screenshot of SQL](newbranch.PNG)
+
+When your finished merge to master
+
+![Screenshot of SQL](merge.PNG)
+
 Step 1
 
 We begin with loging into Azure under a microsoft account.
