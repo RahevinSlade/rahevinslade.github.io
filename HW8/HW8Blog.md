@@ -2,9 +2,14 @@
 
 1) Has scripts to create, populate and delete the database
 
-Created an Up and Down Sql script along with the .mdf file to store everything in. 
+Created an Up and Down Sql script along with the .mdf file to store everything in. Also created a ER Diagram on paper before creating and UP script.
+
+![Screenshot of Up Page](ERDiagram.PNG)
+
 ![Screenshot of Up Page](Up.PNG)
+
 ![Screenshot of Down Page](Down.PNG)
+
 ![Screenshot of Populate Page](Poplute.PNG)
 
 2) Tables have appropriate names, genres,relations/constraints and classifications. 

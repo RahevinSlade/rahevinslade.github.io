@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using HW8.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 
-namespace HW8.DAL
+namespace HW8.Models
 {
-    public class ArtistContext : DbContext
+    public partial class ArtistContext : DbContext
     {
         public ArtistContext() : base("name=ArtistContext")
         {
