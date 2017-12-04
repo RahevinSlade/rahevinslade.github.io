@@ -56,7 +56,7 @@ Ajax is saved inside of scripts and when including in a file we do the following
 
 ![Screenshot of Tables Page](AJAX.PNG)
 
-# Demo Video
+## Demo Video
 
 Find it in my GitHub [here](https://github.com/RahevinSlade/rahevinslade.github.io/tree/master/HW8/HW8/HW8)
 
