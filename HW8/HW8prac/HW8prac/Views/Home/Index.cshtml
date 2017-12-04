@@ -1,0 +1,21 @@
+﻿@model IEnumerable<HW8prac.Models.Genre>
+@section Javascript
+{
+    <script type="text/javascript" src="@Url.Content("/Scripts/gajax.js")"></script>
+}
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@foreach (var item in Model.ToList())
+{
+    <button class="btn btn-primary" onclick="Ajax('@item.GenreID');">@item.GenreName</button>
+}
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div id="results" class="btn"></div>
+    </div>
+
+</div>
