@@ -11,6 +11,8 @@ namespace HW7.Controllers
 {
     public class SearchController : Controller
     {
+
+        private GiphyContext db = new GiphyContext();
         // GET: Search
         public ActionResult Index()
         {
@@ -20,7 +22,21 @@ namespace HW7.Controllers
         [HttpGet]//here is where we decide what to display
         public JsonResult Search()
         {
-            // var selected = $('[name="rate"]:checked').val());
+
+            ///Here is the saving data to the database
+            //DateTime Stamp = DateTime.Now;
+            //string UserIP = 
+            //string Browser = 
+
+            var newSearch = db.Trackers.Create();
+
+            newSearch.Search = Request.QueryString["q"];
+            newSearch.UserIP = Request.UserHostAddress;
+            newSearch.Stamp = DateTime.Now;
+            newSearch.Browser = Request.UserAgent;
+
+            db.Trackers.Add(newSearch);
+            db.SaveChanges();
 
             string rating = Request.QueryString["rating"];
 
