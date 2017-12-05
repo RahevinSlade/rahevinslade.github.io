@@ -1,16 +1,25 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+@*we will display gifs here and it will be awesome*@
 
 <input type="text" id="searchbox" class="form-control" />
-<input type="submit" class="btn btn-primary" id="searchbutton" value="Search" /> 
+
+<p> Please select a rating below</p>
+
+<select class="form-control" id="rating" defaultValue="g">
+    <option value="g"> G </option>
+    <option value="pg-13"> PG </option>
+    <option value="nsfw"> R </option>
+</select>
+
+<input type="submit" class="btn btn-primary" id="searchbutton" value="Search" />
 <div class="row">
     <div id="output">
 
     </div>
 </div>
 
-@section myScripts{ 
+@section myScripts{
     <script src="~/Scripts/search.js"></script>
 }

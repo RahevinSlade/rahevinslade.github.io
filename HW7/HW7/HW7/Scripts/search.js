@@ -1,11 +1,18 @@
 ﻿$("#searchbutton").click(function () {
+
+    var rating = $("#rating").val();
+
+    var rstring = "&rating=" + rating;
+
+    console.log(rstring);
+
     $.ajax(
         {
             type: "GET",
             dataType: "json",
-            url: "/Search/Search?q=" + $("#searchbox").val(),
+            url: "/Search/Search?q=" + $("#searchbox").val() + rstring,
             success: function (data) { displayData(data); },
-            error: function () { alert("Things broke!");}
+            error: function () { alert("Things broke!"); }
         }
     );
 });
