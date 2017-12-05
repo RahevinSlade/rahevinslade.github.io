@@ -9,9 +9,3 @@
 	Constraint [PK_dbo.Tracker] Primary Key clustered (UserID Asc)
 
 );
-
---ID				INT Identity (1,1) NOT NULL,
---	Request			NVARCHAR(256)  NOT NULL,
---	Timestamp		DateTime NOT NULL,
---	IPAddress		NVARCHAR(128) NOT NULL,
---	BrowserClient	NVARCHAR(128) NOT NULL,

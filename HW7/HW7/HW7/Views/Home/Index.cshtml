@@ -5,7 +5,7 @@
 
 <input type="text" id="searchbox" class="form-control" />
 
-<p> Please select a rating below</p>
+<p> Please select a rating below </p>
 
 <select class="form-control" id="rating" defaultValue="g">
     <option value="g"> G </option>
@@ -22,4 +22,7 @@
 
 @section myScripts{
     <script src="~/Scripts/search.js"></script>
+}
+@section Content {
+    <link href="@Url.Content("~/Content/Pretty.css")" rel="stylesheet" type="text/css" />
 }
