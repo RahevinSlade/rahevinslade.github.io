@@ -1,7 +1,6 @@
-﻿
-DROP TABLE dbo.Items;
+﻿DROP TABLE dbo.Bids;
 GO
-DROP TABLE dbo.Bids;
+DROP TABLE dbo.Items;
 GO
 DROP TABLE dbo.Buyers;
 GO
