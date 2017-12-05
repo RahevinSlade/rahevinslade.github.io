@@ -59,19 +59,24 @@ Example of image for product, although not all images are included in the databa
 Below are more code demonstations
 
 This is the layout used for the "menu" bar 
+
 ![Screenshot of Home Page](Layout.PNG)!
 
 This the Homecontroller which determines how each page is run and how it works, for the most part, the product pages run the same, while the review and product information is slightly different
+
 ![Screenshot of Home Page](Controller.PNG)
 
 Here is and example of one of the product pages
 Bikes
+
 ![Screenshot of Home Page](BikeExample.PNG)
 
 Here is how the Productinfomation is created for each item
+
 ![Screenshot of Home Page](ProductInfo.PNG)
 
 A look at the database after a Review has been made
+
 ![Screenshot of Home Page](Data.PNG)
 
 Find it in my GitHub [here](https://github.com/RahevinSlade/rahevinslade.github.io/tree/master/HW6/HW6/HW6)
