@@ -8,7 +8,7 @@ namespace Final.Models
     public partial class FinalContext : DbContext
     {
         public FinalContext()
-            : base("name=FinalContext1")
+            : base("name=FinalContext")
         {
         }
 
