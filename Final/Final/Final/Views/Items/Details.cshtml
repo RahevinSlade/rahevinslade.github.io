@@ -1,5 +1,8 @@
 ﻿@model Final.Models.Item
-
+@section Javascript
+{
+    <script type="text/javascript" src="@Url.Content("/Scripts/Ajax.js")"></script>
+}
 @{
     ViewBag.Title = "Details";
 }
@@ -43,7 +46,20 @@
 
     </dl>
 </div>
+
+<p> Current Bidders for @Html.DisplayFor(model => model.ItemID) </p>
+
+    <button class="btn btn-primary" onclick="ajax_call('@Model.ItemID');"> Display Bidders </button>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div id="results" class="btn"></div>
+    </div>
+
+</div>
+
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |*@
     @Html.ActionLink("Back to List", "Index")
 </p>

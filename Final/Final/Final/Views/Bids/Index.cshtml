@@ -35,15 +35,10 @@
             @Html.DisplayFor(modelItem => item.Item.ItemName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Price)
+            $@Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Stamp)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BidID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BidID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BidID })
         </td>
     </tr>
 }
