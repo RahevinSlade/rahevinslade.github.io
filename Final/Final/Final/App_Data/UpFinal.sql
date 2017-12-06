@@ -30,7 +30,7 @@ Create Table dbo.Bids
 	BuyerID Int Not null,
 	Price Int not null,
 	Stamp DateTime not null,
-	Constraint [PK_dbo.Bids] primary key clustered (BidID Asc),
+	Constraint [PK_dbo.Bids] primary key clustered (Price Desc),
 	constraint [FK_dbo.Items_Bids] Foreign key (ItemID) References dbo.Items(ItemID),
 	Constraint [FK_dbo.Buyers_Bids] Foreign key (BuyerID) References dbo.Buyers(BuyerID)
 );

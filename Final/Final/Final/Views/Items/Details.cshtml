@@ -47,10 +47,6 @@
     </dl>
 </div>
 
-<p> Current Bidders for @Html.DisplayFor(model => model.ItemID) </p>
-
-    <button class="btn btn-primary" onclick="ajax_call('@Model.ItemID');"> Display Bidders </button>
-
 <div class="row">
 
     <div class="col-md-6">
@@ -63,3 +59,33 @@
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |*@
     @Html.ActionLink("Back to List", "Index")
 </p>
+@Scripts.Render("~/bundles/jquery")
+<script>
+    function ajax_call() {
+        var id = @Model.ItemID;
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            url: '/Items/Bidders/' + id,
+            data: { id: id },
+            success: displayResults,
+            error: errorOnAjax
+        });
+    }
+
+    function displayResults(data) {
+        $('#results').empty();
+
+        var item = document.getElementById("#results");
+        data.arr.forEach(function (item) {
+            $('#results').append(item);
+        })
+        console.log(data);
+    }
+
+    function errorOnAjax() {
+        console.log("An error occurred.");
+    }
+
+    window.setInterval(ajax_call(), 5000);
+</script>

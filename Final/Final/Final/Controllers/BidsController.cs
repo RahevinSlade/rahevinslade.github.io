@@ -7,7 +7,6 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Final.Models;
-using System.Diagnostics;
 
 namespace Final.Controllers
 {
@@ -74,24 +73,35 @@ namespace Final.Controllers
             base.Dispose(disposing);
         }
 
+        public JsonResult Bidders(int id)
+        {
+
+            var bids = db.Items.Find(id).Bids.ToList().OrderByDescending(b => b.Price).Select(a => new { b = a.BuyerID, c = a.BidID }).ToList();
+
+            string[] bidmaker = new string[bids.Count];
+
+            for (int i = 0; i < bidmaker.Length; i++)
+            {
+                bidmaker[i] = $"<ul>{db.Buyers.Find(bids[i].b).Buyername} bid ${db.Bids.Find(bids[i].c).Price}</ul>";
+            }
+
+            var data = new { arr = bidmaker };
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
         //public JsonResult Item(int id)
         //{
-        //    var bids = db.Bids.Find(id);
-        //    string[] currentbids = new string[bids];
-
-
-        //    //var artwork = db.Genres.Find(id).Classifications.ToList().OrderBy(t => t.ArtWork.Title).Select(a => new { aw = a.ArtWorkID, awa = a.ArtWork.ArtistID }).ToList();
+        //   // var artwork = db.Bids.Find(id).Item.OrderBy(t => t).Select(a => new { aw = a.., awa = a.ArtWork.ArtistID }).ToList();
         //    //string[] artworkCreator = new string[artwork.Count()];
         //    //for (int i = 0; i < artworkCreator.Length; ++i)
         //    //{
-        //    //    artworkCreator[i] = $"<ul>{db.ArtWorks.Find(artwork[i].aw).Title} by {db.Artists.Find(artwork[i].awa).ArtistName}</ul>";
+        //    //    artworkCreator[i] = $"<ul>{db.Bids.Find(artwork[i].aw).Title} by {db.Bids.Find(artwork[i].awa).BuyerID}</ul>";
         //    //}
         //    //var data = new
         //    //{
         //    //    arr = artworkCreator
         //    //};
 
-        //    //return Json(data, JsonRequestBehavior.AllowGet);
         //    return Json(data, JsonRequestBehavior.AllowGet);
         //}
 

@@ -128,5 +128,21 @@ namespace Final.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public JsonResult Bidders(int id)
+        {
+
+            var bids = db.Items.Find(id).Bids.ToList().OrderByDescending(b => b.Price).Select(a => new { b = a.BuyerID, c = a.BidID }).ToList();
+
+            string[] bidmaker = new string[bids.Count];
+
+            for (int i = 0; i < bidmaker.Length; i++)
+            {
+                bidmaker[i] = $"<ul>{db.Buyers.Find(bids[i].b).Buyername} bid ${db.Bids.Find(bids[i].c).Price}</ul>";
+            }
+
+            var data = new { arr = bidmaker };
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
     }
 }
