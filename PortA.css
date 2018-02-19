@@ -1,6 +1,6 @@
 /* this is the dropdown menu , provides colors and text */
 .dropbtn{
-    background-color: purple;
+    background-color: rgb(31, 30, 31);
     color: white;
     padding: 30px;
     font-size: 15px;
@@ -9,7 +9,7 @@
 }
 /* positions the dropdown menu */
 .dropdown{
-    position: relative;
+    position: left;
     display: inline-block;
     padding:20px;
 }
@@ -23,7 +23,7 @@
     display: none;
     position: absolute;
     right: 0;
-    background-color: #ED3EF3;
+    background-color: rgb(135, 118, 136);
     min-width: 200 px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -38,7 +38,7 @@
 
 /* highlights links within the dropdown menu */
 .dropdown-content a:hover{
-    background-color: red;
+    background-color: rgb(185, 101, 160);
 }
 
 .dropdown:hover .dropdown-content{
@@ -53,17 +53,17 @@
     margin-left: 50px;
     margin-right: 50px;
     padding-bottom: 400px;
-    background-color: #B564EB;
+    background-color: rgb(88, 83, 92);
 
 }
 /* edits the title of the page */
 #title{
-    background-color: #EB52EB;
+    /* background-color: rgb(143, 140, 143); */
     color: black;
 }
 #image{
     margin: auto;
-    float: right;
+    float: left;
 }
 
 /* the body of the page */
